@@ -8,6 +8,8 @@ import (
 	"log/slog"
 	"net/http"
 	"os"
+	"sort"
+	"strconv"
 	"strings"
 	"text/tabwriter"
 )
@@ -15,49 +17,75 @@ import (
 const API = "https://api.warframe.market/v1"
 
 type ItemStat struct {
-	name             string
-	weightedAvgPrice float64
-	avgVol           float64
+	Item
+	WeightedAvgPrice float64
+	AvgVol           float64
 }
 
 type Program struct {
-	items map[string]ItemStat
+	itemStats map[string]ItemStat
 }
 
 func NewProgram() *Program {
 	return &Program{
-		items: make(map[string]ItemStat),
+		itemStats: make(map[string]ItemStat),
 	}
 }
 
-func FormatItems(items map[string]ItemStat) string {
-	maxName, maxPrice, maxVol := 0, 0, 0
+func FormatItemStats(items map[string]ItemStat) string {
+	// get slice from map so we can sort it
+	itemSlice := make([]ItemStat, 0, len(items))
+
+	maxName, maxPrice, maxVol, maxType, maxStanding := 0, 0, 0, 0, 0
 	for _, item := range items {
-		if len(item.name) > maxName {
-			maxName = len(item.name)
+		itemSlice = append(itemSlice, item)
+		if len(item.Name) > maxName {
+			maxName = len(item.Name)
 		}
 
-		priceStr := fmt.Sprintf("%.2f", item.weightedAvgPrice)
+		priceStr := fmt.Sprintf("%.2f", item.WeightedAvgPrice)
 		if len(priceStr) > maxPrice {
 			maxPrice = len(priceStr)
 		}
 
-		volStr := fmt.Sprintf("%.2f", item.avgVol)
+		volStr := fmt.Sprintf("%.2f", item.AvgVol)
 		if len(volStr) > maxVol {
 			maxVol = len(volStr)
 		}
+
+		if len(item.Type) > maxType {
+			maxType = len(item.Type)
+		}
+
+		if len(strconv.Itoa(item.StandingCost)) > maxStanding {
+			maxStanding = len(strconv.Itoa(item.StandingCost))
+		}
 	}
+
+	sort.Slice(itemSlice, func(i, j int) bool {
+		if itemSlice[i].Type == itemSlice[j].Type {
+			return itemSlice[i].Name < itemSlice[j].Name // Sort by Name if Type is the same
+		}
+		return itemSlice[i].Type < itemSlice[j].Type // Sort by Type first
+	})
 
 	var b strings.Builder
 
 	w := tabwriter.NewWriter(&b, 0, 0, 2, ' ', 0)
-	fmt.Fprintln(w, "Name\tPrice\tVolume")
+	fmt.Fprintln(w, "Name\tPrice\tVolume\tType\tStanding")
 
-	fmt.Fprintln(w, strings.Repeat("-", maxPrice)+"\t"+strings.Repeat("-", maxPrice)+"\t"+strings.Repeat("-", maxVol))
+	fmt.Fprintf(
+		w, "%s\t%s\t%s\t%s\t%s\n",
+		strings.Repeat("-", maxName),
+		strings.Repeat("-", maxPrice),
+		strings.Repeat("-", maxVol),
+		strings.Repeat("-", maxType),
+		strings.Repeat("-", maxStanding),
+	)
 
 	count := 0
-	for _, item := range items {
-		fmt.Fprintf(w, "%s\t%.2f\t%.2f", item.name, item.weightedAvgPrice, item.avgVol)
+	for _, item := range itemSlice {
+		fmt.Fprintf(w, "%s\t%.2f\t%.2f\t%v\t%v", item.Name, item.WeightedAvgPrice, item.AvgVol, item.Type, item.StandingCost)
 		count++
 		if count != len(items) {
 			fmt.Fprintln(w)
@@ -68,22 +96,22 @@ func FormatItems(items map[string]ItemStat) string {
 	return b.String()
 }
 
-// getVendorStats takes in a list of [Item] which contains the item name and type (mod, weapon, etc).
+// getVendorStats takes in a Vendor which contains a list of the items name and type (mod, weapon, etc).
 // It will then call another function to fetch the api, and save the result to our program.
-func (p *Program) getVendorStats(items []Item) error {
-	for _, v := range items {
-		price, vol, err := getStatisitics(v)
+func (p *Program) getVendorStats(vendor Vendor) error {
+	for _, item := range vendor.Items {
+		price, vol, err := getStatisitics(item)
 		if err != nil {
 			return err
 		}
 
-		p.items[v.Name] = ItemStat{
-			name:             v.Name,
-			weightedAvgPrice: price,
-			avgVol:           vol,
+		p.itemStats[item.Name] = ItemStat{
+			Item:             item,
+			WeightedAvgPrice: price,
+			AvgVol:           vol,
 		}
 
-		slog.Debug("found item", "name", v.Name, "weightedAvgPrice", price, "avgVol", vol)
+		slog.Debug("found item", "name", item.Name, "weightedAvgPrice", price, "avgVol", vol)
 	}
 
 	slog.Debug("Finished fetching items")
@@ -134,7 +162,7 @@ func getStatisitics(item Item) (float64, float64, error) {
 	}
 
 	// filter rank 0 mods when item is mod
-	if item.Type == Mod {
+	if item.Type == ItemTypeMod {
 		var mod0 []any
 
 		for _, v := range statistics90 {
@@ -173,7 +201,7 @@ func getStatisitics(item Item) (float64, float64, error) {
 }
 
 func main() {
-	debugSet := flag.Bool("debug", false, "a bool")
+	debugSet := flag.Bool("debug", false, "enables debug logging")
 	flag.Parse()
 
 	level := slog.LevelInfo
@@ -189,11 +217,15 @@ func main() {
 
 	p := NewProgram()
 
-	err := p.getVendorStats(AribiterOfHexis[:5])
+	smallhexis := AribiterOfHexis
+	// smallhexis.Items = smallhexis.Items[:5]
+
+	fmt.Println("Fetching items...")
+	err := p.getVendorStats(smallhexis)
 	if err != nil {
 		slog.Error("failed to get vendor statistics", "error", err)
 	}
 
-	fmt.Println("Items:")
-	fmt.Println(FormatItems(p.items))
+	fmt.Println("\nItems:")
+	fmt.Println(FormatItemStats(p.itemStats))
 }
