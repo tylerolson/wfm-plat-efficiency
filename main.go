@@ -2,14 +2,12 @@ package main
 
 import (
 	"encoding/json"
-	"errors"
 	"flag"
 	"fmt"
 	"log/slog"
 	"net/http"
 	"os"
 	"sort"
-	"strconv"
 	"strings"
 	"text/tabwriter"
 )
@@ -36,29 +34,27 @@ func FormatItemStats(items map[string]ItemStat) string {
 	// get slice from map so we can sort it
 	itemSlice := make([]ItemStat, 0, len(items))
 
-	maxName, maxPrice, maxVol, maxType, maxStanding := 0, 0, 0, 0, 0
+	maxName, maxType, maxStanding, maxPrice, maxVol, maxStandVol := 0, 0, 0, 0, 0, 0
 	for _, item := range items {
 		itemSlice = append(itemSlice, item)
-		if len(item.Name) > maxName {
-			maxName = len(item.Name)
-		}
 
-		priceStr := fmt.Sprintf("%.2f", item.WeightedAvgPrice)
-		if len(priceStr) > maxPrice {
-			maxPrice = len(priceStr)
+		if l := len(item.Name); l > maxName {
+			maxName = l
 		}
-
-		volStr := fmt.Sprintf("%.2f", item.AvgVol)
-		if len(volStr) > maxVol {
-			maxVol = len(volStr)
+		if l := len(item.Type); l > maxType {
+			maxType = l
 		}
-
-		if len(item.Type) > maxType {
-			maxType = len(item.Type)
+		if l := len(fmt.Sprintf("%d", item.StandingCost)); l > maxStanding {
+			maxStanding = l
 		}
-
-		if len(strconv.Itoa(item.StandingCost)) > maxStanding {
-			maxStanding = len(strconv.Itoa(item.StandingCost))
+		if l := len(fmt.Sprintf("%.2f", item.WeightedAvgPrice)); l > maxPrice {
+			maxPrice = l
+		}
+		if l := len(fmt.Sprintf("%.2f", item.AvgVol)); l > maxVol {
+			maxVol = l
+		}
+		if l := len(fmt.Sprintf("%.2f", float64(item.StandingCost)/item.WeightedAvgPrice)); l > maxStandVol {
+			maxStandVol = l
 		}
 	}
 
@@ -70,24 +66,31 @@ func FormatItemStats(items map[string]ItemStat) string {
 	})
 
 	var b strings.Builder
-
 	w := tabwriter.NewWriter(&b, 0, 0, 2, ' ', 0)
-	fmt.Fprintln(w, "Name\tPrice\tVolume\tType\tStanding")
 
+	fmt.Fprintln(w, "Name\tType\tStanding\tPrice\tVolume\tStanding/Plat (lower is better)")
 	fmt.Fprintf(
-		w, "%s\t%s\t%s\t%s\t%s\n",
+		w, "%s\t%s\t%s\t%s\t%s\t%s\n",
 		strings.Repeat("-", maxName),
-		strings.Repeat("-", maxPrice),
-		strings.Repeat("-", maxVol),
 		strings.Repeat("-", maxType),
 		strings.Repeat("-", maxStanding),
+		strings.Repeat("-", maxPrice),
+		strings.Repeat("-", maxVol),
+		strings.Repeat("-", maxStandVol),
 	)
 
-	count := 0
-	for _, item := range itemSlice {
-		fmt.Fprintf(w, "%s\t%.2f\t%.2f\t%v\t%v", item.Name, item.WeightedAvgPrice, item.AvgVol, item.Type, item.StandingCost)
-		count++
-		if count != len(items) {
+	for i, item := range itemSlice {
+		fmt.Fprintf(
+			w, "%s\t%v\t%v\t%.2f\t%.2f\t%0.2f",
+			item.Name,
+			item.Type,
+			item.StandingCost,
+			item.WeightedAvgPrice,
+			item.AvgVol,
+			float64(item.StandingCost)/item.WeightedAvgPrice,
+		)
+
+		if i != len(itemSlice)-1 {
 			fmt.Fprintln(w)
 		}
 	}
@@ -119,6 +122,20 @@ func (p *Program) getVendorStats(vendor Vendor) error {
 	return nil
 }
 
+type NintyDays struct {
+	Volume   int     `json:"volume"`
+	AvgPrice float64 `json:"avg_price"`
+	ModRank  int     `json:"mod_rank"`
+}
+
+type StatisticResponse struct {
+	Payload struct {
+		StatisticsClosed struct {
+			NintyDays []NintyDays `json:"90days"`
+		} `json:"statistics_closed"`
+	} `json:"payload"`
+}
+
 // getStatisitics takes in an [Item] containing an items name and [ItemType].
 // It fetches the API statistics and calculates and returns:
 //
@@ -136,66 +153,34 @@ func getStatisitics(item Item) (float64, float64, error) {
 
 	decoder := json.NewDecoder(resp.Body)
 
-	// we could use a struct here, but not every item type has the same fields, and I dont wanna make a bunch of different structs
-	var response map[string]any
+	var response StatisticResponse
 	err = decoder.Decode(&response)
 	if err != nil {
 		return 0, 0, fmt.Errorf("failed to decode statistics:%w", err)
 	}
 
-	payload, ok := response["payload"].(map[string]any)
-	if !ok {
-		slog.Error("could not find payload")
-		return 0, 0, errors.New("could not find payload")
-	}
-
-	statisticsClosed, ok := payload["statistics_closed"].(map[string]any)
-	if !ok {
-		slog.Error("could not find statistics_closed")
-		return 0, 0, errors.New("could not find statistics_closed")
-	}
-
-	statistics90, ok := statisticsClosed["90days"].([]any)
-	if !ok {
-		slog.Error("could not find 90days")
-		return 0, 0, errors.New("could not find 90days")
-	}
+	nintyDays := response.Payload.StatisticsClosed.NintyDays
 
 	// filter rank 0 mods when item is mod
 	if item.Type == ItemTypeMod {
-		var mod0 []any
-
-		for _, v := range statistics90 {
-			statMap, ok := v.(map[string]any)
-			if !ok {
-				slog.Error("could not assert statistic entry as map", "error", err)
-				return 0, 0, fmt.Errorf("could not assert statistic entry as map: %w", err)
-			}
-
-			modRank, ok := statMap["mod_rank"].(float64) // json numbers are float64
-			if !ok {
-				slog.Error("could not find mod_rank", "error", err)
-				return 0, 0, fmt.Errorf("could not assert statistic entry as map: %w", err)
-			}
-
-			if modRank == 0 {
+		var mod0 []NintyDays
+		for _, v := range nintyDays {
+			if v.ModRank == 0 {
 				mod0 = append(mod0, v)
 			}
 		}
 
-		statistics90 = mod0
+		response.Payload.StatisticsClosed.NintyDays = mod0
 	}
 
-	today := statistics90[0].(map[string]any)
-	todayAvgPrice := today["avg_price"].(float64)
-	todayVolume := today["volume"].(float64)
+	today := nintyDays[0]
+	yesterday := nintyDays[1]
 
-	yesterday := statistics90[1].(map[string]any)
-	yesterdayAvgPrice := yesterday["avg_price"].(float64)
-	yesterdayVolume := yesterday["volume"].(float64)
+	weightedAvgPrice := 0.0
+	weightedAvgPrice += today.AvgPrice*float64(today.Volume) + yesterday.AvgPrice*float64(yesterday.Volume)
+	weightedAvgPrice /= float64(today.Volume + yesterday.Volume)
 
-	weightedAvgPrice := ((todayAvgPrice * todayVolume) + (yesterdayAvgPrice * yesterdayVolume)) / (todayVolume + yesterdayVolume)
-	avgVolume := (todayVolume + yesterdayVolume) / 2
+	avgVolume := float64(today.Volume+yesterday.Volume) / 2
 
 	return weightedAvgPrice, avgVolume, nil
 }
@@ -209,7 +194,7 @@ func main() {
 		level = slog.LevelDebug
 	}
 
-	logger := slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{
+	logger := slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
 		Level: level,
 	}))
 
