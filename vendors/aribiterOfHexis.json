@@ -1,0 +1,340 @@
+{
+	"name": "Arbitier of Hexis",
+	"items": [
+		{
+			"name": "gilded_truth",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "blade_of_truth",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "avenging_truth",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "stinging_truth",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "seeking_shuriken",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "smoke_shadow",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "fatal_teleport",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "rising_storm",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "endless_lullaby",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "reactive_storm",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "duality",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "calm_and_frenzy",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "peaceful_provocation",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "energy_transfer",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "surging_dash",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "radiant_finish",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "furious_javelin",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "chromatic_blade",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "shattered_storm",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "mending_splinters",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "spectrosiphon",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "mach_crash",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "thermal_transfer",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "cathode_current",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "tribunal",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "warding_thurible",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "lasting_covenant",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "desiccations_curse",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "elemental_sandstorm",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "negation_swarm",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "rift_haven",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "rift_torrent",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "cataclysmic_continuum",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "savior_decoy",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "hushed_invisibility",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "safeguard_switch",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "irradiating_disarm",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "hall_of_malevolence",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "explosive_legerdemain",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "total_eclipse",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "mind_freak",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "pacifying_bolts",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "chaos_sphere",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "assimilate",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "repair_dispensary",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "temporal_erosion",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "intrepid_stand",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "shock_trooper",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "shocking_speed",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "transistor_shield",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "capacitance",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "celestial_stomp",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "enveloping_cloud",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "primal_rage",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "elusive_retribution",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "damage_decoy",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "axios_javelineers",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "warriors_rest",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "coil_recharge",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "decurion_barrel",
+			"type": 2,
+			"standing": 20000
+		},
+		{
+			"name": "phaedra_barrel",
+			"type": 2,
+			"standing": 20000
+		},
+		{
+			"name": "corvas_barrel",
+			"type": 2,
+			"standing": 20000
+		},
+		{
+			"name": "cyngas_barrel",
+			"type": 2,
+			"standing": 20000
+		},
+		{
+			"name": "centaur_aegis",
+			"type": 2,
+			"standing": 20000
+		},
+		{
+			"name": "telos_akbolto",
+			"type": 3,
+			"standing": 100000
+		},
+		{
+			"name": "telos_boltor",
+			"type": 3,
+			"standing": 125000
+		},
+		{
+			"name": "telos_boltace",
+			"type": 3,
+			"standing": 125000
+		}
+	]
+}

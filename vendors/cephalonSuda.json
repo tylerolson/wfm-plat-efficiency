@@ -1,0 +1,305 @@
+{
+	"name": "Cephalon Suda",
+	"items": [
+		{
+			"name": "entropy_spike",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "entropy_flight",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "entropy_detonation",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "entropy_burst",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "sonic_fracture",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "resonance",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "savage_silence",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "resonating_quake",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "afterburn",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "everlasting_ward",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "vexing_retaliation",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "guided_effigy",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "freeze_force",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "ice_wave_impedance",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "chilling_globe",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "icy_avalanche",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "biting_frost",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "balefire_surge",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "blazing_pillage",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "corroding_barrage",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "tidal_impunity",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "curative_undertow",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "pilfering_swarm",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "empowered_quiver",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "piercing_navigator",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "infiltrate",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "concentrated_arrow",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "rift_haven",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "rift_torrent",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "cataclysmic_continuum",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "hall_of_malevolence",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "explosive_legerdemain",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "total_eclipse",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "pyroclastic_flow",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "reaping_chakram",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "safeguard",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "controlled_slide",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "neutron_star",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "antimatter_absorb",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "escape_velocity",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "molecular_fission",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "partitioned_mallet",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "conductor",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "thrall_pact",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "mesmer_shield",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "blinding_reave",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "shadow_haze",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "tesla_bank",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "repelling_bastille",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "photon_repeater",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "fused_reservoir",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "critical_surge",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "vampiric_grasp",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "the_relentless_lost",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "merulina_guardian",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "surging_blades",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "guardian_armor",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "divine_retribution",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "loyal_merulina",
+			"type": 1,
+			"standing": 25000
+		},
+		{
+			"name": "aegis_gale",
+			"type": 1,
+			"standing": 25000
+		}
+	]
+}
