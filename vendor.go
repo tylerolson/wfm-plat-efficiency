@@ -7,7 +7,9 @@ import (
 	"net/http"
 	"sort"
 	"strings"
+	"sync"
 	"text/tabwriter"
+	"time"
 )
 
 // should be int but idc
@@ -119,20 +121,46 @@ func (v Vendor) String() string {
 }
 
 // getVendorStats takes in a Vendor which contains a list of the items name and type (mod, weapon, etc).
-// It will then call another function to fetch the api, and save the result to our program.
+// It will then call another function to fetch the api, and update the market data.
 func (v *Vendor) getVendorStats() error {
-	for _, item := range v.Items {
-		err := item.getStatisitics()
-		if err != nil {
-			return err
-		}
+	var (
+		ticker = time.NewTicker(time.Second / 5) // rate limit is 3/second but this seems to work?
+		wg     sync.WaitGroup
+		errCh  = make(chan error, len(v.Items))
+		doneCh = make(chan struct{})
+	)
 
-		slog.Debug("found item", "name", item.Name, "weightedAvgPrice", item.WeightedAvgPrice, "avgVol", item.AvgVol)
+	defer ticker.Stop()
+
+	for _, item := range v.Items {
+		wg.Add(1)
+
+		go func(i *Item) {
+			defer wg.Done()
+
+			<-ticker.C
+
+			if err := i.getStatisitics(); err != nil {
+				errCh <- fmt.Errorf("error fetching %s: %w", i.Name, err)
+				return
+			}
+
+			slog.Debug("found item", "name", item.Name, "weightedAvgPrice", item.WeightedAvgPrice, "avgVol", item.AvgVol)
+		}(item)
 	}
 
-	slog.Debug("Finished fetching items")
+	go func() {
+		wg.Wait()
+		close(doneCh)
+	}()
 
-	return nil
+	select {
+	case <-doneCh:
+		slog.Debug("Finished fetching items")
+		return nil
+	case err := <-errCh:
+		return err
+	}
 }
 
 type NintyDays struct {
