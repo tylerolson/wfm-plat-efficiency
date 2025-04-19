@@ -122,12 +122,10 @@ func (v Vendor) String() string {
 // getVendorStats takes in a Vendor which contains a list of the items name and type (mod, weapon, etc).
 // It will then call another function to fetch the api, and update the market data.
 func (v *Vendor) GetVendorStats() error {
-	var (
-		ticker = time.NewTicker(time.Second / 5) // rate limit is 3/second but this seems to work?
-		wg     sync.WaitGroup
-		errCh  = make(chan error, len(v.Items))
-		doneCh = make(chan struct{})
-	)
+	var wg sync.WaitGroup
+	ticker := time.NewTicker(time.Second / 5) // rate limit is 3/second but this seems to work?
+	errCh := make(chan error, len(v.Items))
+	doneCh := make(chan struct{})
 
 	defer ticker.Stop()
 
