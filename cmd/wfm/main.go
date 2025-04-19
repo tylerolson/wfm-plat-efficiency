@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"log/slog"
 	"os"
@@ -10,17 +9,7 @@ import (
 )
 
 func main() {
-	debugSet := flag.Bool("debug", false, "enables debug logging")
-	flag.Parse()
-
-	level := slog.LevelInfo
-	if *debugSet {
-		level = slog.LevelDebug
-	}
-
-	logger := slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
-		Level: level,
-	}))
+	logger := slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{}))
 
 	slog.SetDefault(logger)
 

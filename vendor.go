@@ -3,7 +3,6 @@ package wfmplatefficiency
 import (
 	"encoding/json"
 	"fmt"
-	"log/slog"
 	"net/http"
 	"sort"
 	"strings"
@@ -144,8 +143,6 @@ func (v *Vendor) GetVendorStats() error {
 				errCh <- fmt.Errorf("error fetching %s: %w", i.Name, err)
 				return
 			}
-
-			slog.Debug("found item", "name", item.Name, "weightedAvgPrice", item.WeightedAvgPrice, "avgVol", item.AvgVol)
 		}(item)
 	}
 
@@ -156,7 +153,6 @@ func (v *Vendor) GetVendorStats() error {
 
 	select {
 	case <-doneCh:
-		slog.Debug("Finished fetching items")
 		return nil
 	case err := <-errCh:
 		return err
@@ -184,8 +180,6 @@ type StatisticResponse struct {
 //  2. avgVolume = (todayVolume + yesterdayVolume) / 2
 //  3. error
 func (i *Item) getStatisitics() error {
-	slog.Debug("requesting", "name", i.Name, "type", i.Type)
-
 	resp, err := http.Get(fmt.Sprintf("%v/items/%v/statistics", API, i.Name))
 	if err != nil {
 		return fmt.Errorf("failed to get statistics:%w", err)

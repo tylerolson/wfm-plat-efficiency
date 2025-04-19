@@ -1,14 +1,16 @@
 package wfmplatefficiency
 
 import (
+	"embed"
 	"encoding/json"
 	"fmt"
-	"log/slog"
-	"os"
 	"path/filepath"
 )
 
 const API = "https://api.warframe.market/v1"
+
+//go:embed vendors/*.json
+var vendorFS embed.FS
 
 type Scraper struct {
 	Vendors map[string]*Vendor
@@ -25,23 +27,21 @@ func (p *Scraper) AddVendor(vendor Vendor) {
 }
 
 func LoadVendors() ([]Vendor, error) {
-	dir := "vendors"
-	var vendors []Vendor
-
-	files, err := os.ReadDir(dir)
+	files, err := vendorFS.ReadDir("vendors")
 	if err != nil {
-		return nil, fmt.Errorf("error reading vendor directory: %w", err)
+		return nil, fmt.Errorf("error reading embedded vendor directory: %w", err)
 	}
 
+	var vendors []Vendor
 	for _, file := range files {
 		if file.IsDir() || filepath.Ext(file.Name()) != ".json" {
 			continue
 		}
 
-		path := filepath.Join(dir, file.Name())
-		data, err := os.ReadFile(path)
+		path := filepath.Join("vendors", file.Name())
+		data, err := vendorFS.ReadFile(path)
 		if err != nil {
-			return nil, fmt.Errorf("error reading file %s: %w", file.Name(), err)
+			return nil, fmt.Errorf("error reading embedded file %s: %w", file.Name(), err)
 		}
 
 		var vendor Vendor
@@ -50,7 +50,6 @@ func LoadVendors() ([]Vendor, error) {
 		}
 
 		vendors = append(vendors, vendor)
-		slog.Debug("added vendor", "name", vendor.Name)
 	}
 
 	return vendors, nil
