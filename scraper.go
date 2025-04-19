@@ -13,23 +13,23 @@ const API = "https://api.warframe.market/v1"
 var vendorFS embed.FS
 
 type Scraper struct {
-	Vendors map[string]*Vendor
+	vendors map[string]*Vendor
 }
 
 func NewScraper() *Scraper {
 	return &Scraper{
-		Vendors: make(map[string]*Vendor),
+		vendors: make(map[string]*Vendor),
 	}
 }
 
-func (p *Scraper) AddVendor(vendor Vendor) {
-	p.Vendors[vendor.Name] = &vendor
+func (p *Scraper) GetVendors() map[string]*Vendor {
+	return p.vendors
 }
 
-func LoadVendors() ([]Vendor, error) {
+func (p *Scraper) LoadVendors() error {
 	files, err := vendorFS.ReadDir("vendors")
 	if err != nil {
-		return nil, fmt.Errorf("error reading embedded vendor directory: %w", err)
+		return fmt.Errorf("error reading embedded vendor directory: %w", err)
 	}
 
 	var vendors []Vendor
@@ -41,16 +41,20 @@ func LoadVendors() ([]Vendor, error) {
 		path := filepath.Join("vendors", file.Name())
 		data, err := vendorFS.ReadFile(path)
 		if err != nil {
-			return nil, fmt.Errorf("error reading embedded file %s: %w", file.Name(), err)
+			return fmt.Errorf("error reading embedded file %s: %w", file.Name(), err)
 		}
 
 		var vendor Vendor
 		if err := json.Unmarshal(data, &vendor); err != nil {
-			return nil, fmt.Errorf("error unmarshaling file %s: %w", file.Name(), err)
+			return fmt.Errorf("error unmarshaling file %s: %w", file.Name(), err)
 		}
 
 		vendors = append(vendors, vendor)
 	}
 
-	return vendors, nil
+	for _, v := range vendors {
+		p.vendors[v.Name] = &v
+	}
+
+	return nil
 }

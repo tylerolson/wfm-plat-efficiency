@@ -131,6 +131,7 @@ func (v *Vendor) GetVendorStats() error {
 
 	defer ticker.Stop()
 
+	// TODO: add an info channel to get live updates
 	for _, item := range v.Items {
 		wg.Add(1)
 
@@ -159,16 +160,16 @@ func (v *Vendor) GetVendorStats() error {
 	}
 }
 
-type NintyDays struct {
+type nintyDay struct {
 	Volume   int     `json:"volume"`
 	AvgPrice float64 `json:"avg_price"`
 	ModRank  int     `json:"mod_rank"`
 }
 
-type StatisticResponse struct {
+type statisticResponse struct {
 	Payload struct {
 		StatisticsClosed struct {
-			NintyDays []NintyDays `json:"90days"`
+			NintyDays []nintyDay `json:"90days"`
 		} `json:"statistics_closed"`
 	} `json:"payload"`
 }
@@ -188,7 +189,7 @@ func (i *Item) getStatisitics() error {
 
 	decoder := json.NewDecoder(resp.Body)
 
-	var response StatisticResponse
+	var response statisticResponse
 	err = decoder.Decode(&response)
 	if err != nil {
 		return fmt.Errorf("failed to decode statistics:%w", err)
@@ -197,8 +198,9 @@ func (i *Item) getStatisitics() error {
 	nintyDays := response.Payload.StatisticsClosed.NintyDays
 
 	// filter rank 0 mods when item is mod
+
 	if i.Type == ItemTypeMod {
-		var mod0 []NintyDays
+		var mod0 []nintyDay
 		for _, v := range nintyDays {
 			if v.ModRank == 0 {
 				mod0 = append(mod0, v)
