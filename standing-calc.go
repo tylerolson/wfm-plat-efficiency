@@ -1,9 +1,11 @@
-package wfmplatefficiency
+package standingcalc
 
 import (
+	"embed"
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"path/filepath"
 	"sort"
 	"strings"
 	"sync"
@@ -11,7 +13,58 @@ import (
 	"time"
 )
 
-// should be int but idc
+const API = "https://api.warframe.market/v1"
+
+//go:embed vendors/*.json
+var vendorFS embed.FS
+
+type Scraper struct {
+	vendors map[string]*Vendor
+}
+
+func NewScraper() *Scraper {
+	return &Scraper{
+		vendors: make(map[string]*Vendor),
+	}
+}
+
+func (p *Scraper) GetVendors() map[string]*Vendor {
+	return p.vendors
+}
+
+func (p *Scraper) LoadVendors() error {
+	files, err := vendorFS.ReadDir("vendors")
+	if err != nil {
+		return fmt.Errorf("error reading embedded vendor directory: %w", err)
+	}
+
+	var vendors []Vendor
+	for _, file := range files {
+		if file.IsDir() || filepath.Ext(file.Name()) != ".json" {
+			continue
+		}
+
+		path := filepath.Join("vendors", file.Name())
+		data, err := vendorFS.ReadFile(path)
+		if err != nil {
+			return fmt.Errorf("error reading embedded file %s: %w", file.Name(), err)
+		}
+
+		var vendor Vendor
+		if err := json.Unmarshal(data, &vendor); err != nil {
+			return fmt.Errorf("error unmarshaling file %s: %w", file.Name(), err)
+		}
+
+		vendors = append(vendors, vendor)
+	}
+
+	for _, v := range vendors {
+		p.vendors[v.Name] = &v
+	}
+
+	return nil
+}
+
 type ItemType int
 
 const (
@@ -158,7 +211,7 @@ func (v *Vendor) GetVendorStats() error {
 	}
 }
 
-type nintyDay struct {
+type ninetyDay struct {
 	Volume   int     `json:"volume"`
 	AvgPrice float64 `json:"avg_price"`
 	ModRank  int     `json:"mod_rank"`
@@ -167,7 +220,7 @@ type nintyDay struct {
 type statisticResponse struct {
 	Payload struct {
 		StatisticsClosed struct {
-			NintyDays []nintyDay `json:"90days"`
+			NinetyDays []ninetyDay `json:"90days"`
 		} `json:"statistics_closed"`
 	} `json:"payload"`
 }
@@ -193,23 +246,23 @@ func (i *Item) getStatisitics() error {
 		return fmt.Errorf("failed to decode statistics:%w", err)
 	}
 
-	nintyDays := response.Payload.StatisticsClosed.NintyDays
+	ninetyDays := response.Payload.StatisticsClosed.NinetyDays
 
 	// filter rank 0 mods when item is mod
 
 	if i.Type == ItemTypeMod {
-		var mod0 []nintyDay
-		for _, v := range nintyDays {
+		var mod0 []ninetyDay
+		for _, v := range ninetyDays {
 			if v.ModRank == 0 {
 				mod0 = append(mod0, v)
 			}
 		}
 
-		response.Payload.StatisticsClosed.NintyDays = mod0
+		response.Payload.StatisticsClosed.NinetyDays = mod0
 	}
 
-	today := nintyDays[0]
-	yesterday := nintyDays[1]
+	today := ninetyDays[0]
+	yesterday := ninetyDays[1]
 
 	i.WeightedAvgPrice = 0.0
 	i.WeightedAvgPrice += today.AvgPrice*float64(today.Volume) + yesterday.AvgPrice*float64(yesterday.Volume)

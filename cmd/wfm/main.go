@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"os"
 
-	wfmplatefficiency "github.com/tylerolson/wfm-plat-efficiency"
+	standingcalc "github.com/tylerolson/wfm-plat-efficiency"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 	slog.SetDefault(logger)
 
 	// weird naming, weird way of loading, it just has to work for now
-	scraper := wfmplatefficiency.NewScraper()
+	scraper := standingcalc.NewScraper()
 
 	err := scraper.LoadVendors()
 	if err != nil {
