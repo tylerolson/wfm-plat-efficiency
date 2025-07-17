@@ -1,23 +1,23 @@
 {
-  "name": "Cephalon Suda",
+  "name": "The Perrin Sequence",
   "items": [
     {
-      "name": "entropy_spike",
+      "name": "toxic_sequence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_flight",
+      "name": "deadly_sequence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_detonation",
+      "name": "voltage_sequence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_burst",
+      "name": "sequence_burn",
       "type": 0,
       "standing": 25000
     },
@@ -62,27 +62,17 @@
       "standing": 25000
     },
     {
-      "name": "freeze_force",
+      "name": "mach_crash",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "ice_wave_impedance",
+      "name": "thermal_transfer",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "chilling_globe",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "icy_avalanche",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "biting_frost",
+      "name": "cathode_current",
       "type": 0,
       "standing": 25000
     },
@@ -97,22 +87,17 @@
       "standing": 25000
     },
     {
-      "name": "corroding_barrage",
+      "name": "desiccations_curse",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "tidal_impunity",
+      "name": "elemental_sandstorm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rousing_plunder",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "pilfering_swarm",
+      "name": "negation_swarm",
       "type": 0,
       "standing": 25000
     },
@@ -137,82 +122,72 @@
       "standing": 25000
     },
     {
-      "name": "rift_haven",
+      "name": "greedy_pull",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rift_torrent",
+      "name": "magnetized_discharge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "cataclysmic_continuum",
+      "name": "counter_pulse",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "hall_of_malevolence",
+      "name": "fracturing_crush",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "explosive_legerdemain",
+      "name": "soul_survivor",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "total_eclipse",
+      "name": "creeping_terrify",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "pyroclastic_flow",
+      "name": "despoil",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "reaping_chakram",
+      "name": "shield_of_shadows",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "safeguard",
+      "name": "teeming_virulence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "controlled_slide",
+      "name": "larva_burst",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "neutron_star",
+      "name": "insatiable",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "antimatter_absorb",
+      "name": "abundant_mutation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "escape_velocity",
+      "name": "repair_dispensary",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "molecular_fission",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "partitioned_mallet",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "conductor",
+      "name": "temporal_erosion",
       "type": 0,
       "standing": 25000
     },
@@ -232,7 +207,67 @@
       "standing": 25000
     },
     {
-      "name": "shadow_haze",
+      "name": "ironclad_charge",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "iron_shrapnel",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "piercing_roar",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "reinforcing_stomp",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "pool_of_life",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "vampire_leech",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "abating_link",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "champions_blessing",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "swing_line",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "eternal_war",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "prolonged_paralysis",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "hysterical_assault",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "enraged",
       "type": 0,
       "standing": 25000
     },
@@ -252,32 +287,7 @@
       "standing": 25000
     },
     {
-      "name": "fused_reservoir",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "critical_surge",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "vampiric_grasp",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "the_relentless_lost",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "merulina_guardian",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "surging_blades",
+      "name": "shadow_haze",
       "type": 0,
       "standing": 25000
     },
@@ -287,12 +297,12 @@
       "standing": 25000
     },
     {
-      "name": "divine_retribution",
+      "name": "parasitic_vitality",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "loyal_merulina",
+      "name": "coil_recharge",
       "type": 0,
       "standing": 25000
     },
@@ -302,42 +312,37 @@
       "standing": 25000
     },
     {
-      "name": "decurion_receiver",
+      "name": "onorix_handle",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "velocitus_barrel",
+      "name": "phaedra_receiver",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "corvas_receiver",
+      "name": "centaur_blade",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "cyngas_receiver",
+      "name": "cyngas_stock",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "fluctus_barrel",
-      "type": 1,
-      "standing": 20000
-    },
-    {
-      "name": "synoid_gammacor",
+      "name": "secura_dual_cestra",
       "type": 2,
       "standing": 100000
     },
     {
-      "name": "synoid_simulor",
+      "name": "secura_penta",
       "type": 2,
       "standing": 125000
     },
     {
-      "name": "synoid_heliocor",
+      "name": "secura_lecta",
       "type": 2,
       "standing": 125000
     }

@@ -1,98 +1,68 @@
 {
-  "name": "Cephalon Suda",
+  "name": "New Loka",
   "items": [
     {
-      "name": "entropy_spike",
+      "name": "winds_of_purity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_flight",
+      "name": "disarming_purity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_detonation",
+      "name": "bright_purity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_burst",
+      "name": "lasting_purity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "sonic_fracture",
+      "name": "endless_lullaby",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "resonance",
+      "name": "reactive_storm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "savage_silence",
+      "name": "duality",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "resonating_quake",
+      "name": "calm_and_frenzy",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "afterburn",
+      "name": "peaceful_provocation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "everlasting_ward",
+      "name": "energy_transfer",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "vexing_retaliation",
+      "name": "shattered_storm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "guided_effigy",
+      "name": "mending_splinters",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "freeze_force",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "ice_wave_impedance",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "chilling_globe",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "icy_avalanche",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "biting_frost",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "balefire_surge",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "blazing_pillage",
+      "name": "spectrosiphon",
       "type": 0,
       "standing": 25000
     },
@@ -117,92 +87,67 @@
       "standing": 25000
     },
     {
-      "name": "empowered_quiver",
+      "name": "swift_bite",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "piercing_navigator",
+      "name": "greedy_pull",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "infiltrate",
+      "name": "magnetized_discharge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "concentrated_arrow",
+      "name": "counter_pulse",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rift_haven",
+      "name": "fracturing_crush",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rift_torrent",
+      "name": "mind_freak",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "cataclysmic_continuum",
+      "name": "pacifying_bolts",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "hall_of_malevolence",
+      "name": "chaos_sphere",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "explosive_legerdemain",
+      "name": "assimilate",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "total_eclipse",
+      "name": "smite_infusion",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "pyroclastic_flow",
+      "name": "hallowed_eruption",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "reaping_chakram",
+      "name": "phoenix_renewal",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "safeguard",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "controlled_slide",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "neutron_star",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "antimatter_absorb",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "escape_velocity",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "molecular_fission",
+      "name": "hallowed_reckoning",
       "type": 0,
       "standing": 25000
     },
@@ -217,37 +162,72 @@
       "standing": 25000
     },
     {
-      "name": "thrall_pact",
+      "name": "spellbound_harvest",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "mesmer_shield",
+      "name": "beguiling_lantern",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "blinding_reave",
+      "name": "razorwing_blitz",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shadow_haze",
+      "name": "intrepid_stand",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "tesla_bank",
+      "name": "ironclad_flight",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "repelling_bastille",
+      "name": "pool_of_life",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "photon_repeater",
+      "name": "vampire_leech",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "abating_link",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "champions_blessing",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "swing_line",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "eternal_war",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "prolonged_paralysis",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "hysterical_assault",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "enraged",
       "type": 0,
       "standing": 25000
     },
@@ -262,12 +242,42 @@
       "standing": 25000
     },
     {
-      "name": "vampiric_grasp",
+      "name": "target_fixation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "the_relentless_lost",
+      "name": "airburst_rounds",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "jet_stream",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "funnel_clouds",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "anchored_glide",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "celestial_stomp",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "enveloping_cloud",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "primal_rage",
       "type": 0,
       "standing": 25000
     },
@@ -282,12 +292,22 @@
       "standing": 25000
     },
     {
-      "name": "guardian_armor",
+      "name": "elusive_retribution",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "divine_retribution",
+      "name": "wrath_of_ukko",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "valence_formation",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "axios_javelineers",
       "type": 0,
       "standing": 25000
     },
@@ -297,47 +317,42 @@
       "standing": 25000
     },
     {
-      "name": "aegis_gale",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "decurion_receiver",
+      "name": "onorix_blade",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "velocitus_barrel",
+      "name": "phaedra_stock",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "corvas_receiver",
+      "name": "rathbone_head",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "cyngas_receiver",
+      "name": "agkuza_blade",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "fluctus_barrel",
+      "name": "centaur_handle",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "synoid_gammacor",
+      "name": "sancti_castanas",
       "type": 2,
       "standing": 100000
     },
     {
-      "name": "synoid_simulor",
+      "name": "sancti_tigris",
       "type": 2,
       "standing": 125000
     },
     {
-      "name": "synoid_heliocor",
+      "name": "sancti_magistar",
       "type": 2,
       "standing": 125000
     }

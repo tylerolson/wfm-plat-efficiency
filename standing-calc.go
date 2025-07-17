@@ -4,6 +4,7 @@ import (
 	"embed"
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"path/filepath"
 	"sort"
@@ -176,7 +177,7 @@ func (v Vendor) String() string {
 // It will then call another function to fetch the api, and update the market data.
 func (v *Vendor) GetVendorStats() error {
 	var wg sync.WaitGroup
-	ticker := time.NewTicker(time.Second / 5) // rate limit is 3/second but this seems to work?
+	ticker := time.NewTicker(time.Second / 3)
 	errCh := make(chan error, len(v.Items))
 	doneCh := make(chan struct{})
 
@@ -225,6 +226,10 @@ type statisticResponse struct {
 	} `json:"payload"`
 }
 
+type apiErrorResponse struct {
+	Error string `json:"error"`
+}
+
 // getStatisitics takes in an [Item] containing an items name and [ItemType].
 // It fetches the API statistics and calculates and returns:
 //
@@ -232,7 +237,19 @@ type statisticResponse struct {
 //  2. avgVolume = (todayVolume + yesterdayVolume) / 2
 //  3. error
 func (i *Item) getStatisitics() error {
-	resp, err := http.Get(fmt.Sprintf("%v/items/%v/statistics", API, i.Name))
+	url := fmt.Sprintf("%v/items/%v/statistics", API, i.Name)
+
+	// make a stupid request with an accept header since warframe market redirects without it
+	req, err := http.NewRequest("GET", url, nil) // No request body for GET
+	if err != nil {
+		log.Fatalf("Error creating request: %v", err)
+	}
+
+	req.Header.Add("Accept", "application/json")
+
+	client := &http.Client{}
+
+	resp, err := client.Do(req)
 	if err != nil {
 		return fmt.Errorf("failed to get statistics:%w", err)
 	}
@@ -244,6 +261,14 @@ func (i *Item) getStatisitics() error {
 	err = decoder.Decode(&response)
 	if err != nil {
 		return fmt.Errorf("failed to decode statistics:%w", err)
+	}
+
+	if resp.StatusCode != http.StatusOK {
+		if resp.StatusCode == http.StatusNotFound {
+			return fmt.Errorf("item does not exist")
+		}
+
+		return fmt.Errorf("unkown HTTP error: %v", resp.Status)
 	}
 
 	ninetyDays := response.Payload.StatisticsClosed.NinetyDays
