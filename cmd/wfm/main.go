@@ -2,34 +2,24 @@ package main
 
 import (
 	"fmt"
-	"log/slog"
-	"os"
+	"log"
 
 	standingcalc "github.com/tylerolson/wfm-plat-efficiency"
 )
 
 func main() {
-	logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
-	slog.SetDefault(logger)
-
-	// weird naming, weird way of loading, it just has to work for now
 	scraper := standingcalc.NewScraper()
 
-	err := scraper.LoadVendors()
-	if err != nil {
-		slog.Error("failed to get vendors", "error", err)
-		return
+	if err := scraper.LoadVendors(); err != nil {
+		log.Fatal(err)
 	}
 
-	for _, v := range scraper.GetVendors() {
-		fmt.Printf("Fetching items for: %s\n", v.Name)
-		err := v.GetVendorStats()
-		// TODO: get live updates via channel
-		if err != nil {
-			slog.Error("failed to get vendor statistics", "error", err)
-		}
+	// Update market data for all vendors
+	if err := scraper.UpdateAllVendorStats(); err != nil {
+		log.Fatal(err)
 	}
 
+	// Display vendor information
 	for _, v := range scraper.GetVendors() {
 		fmt.Printf("\n%s:\n", v.Name)
 		fmt.Println(v.String())
