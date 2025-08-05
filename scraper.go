@@ -35,22 +35,11 @@ func (s *Scraper) LoadVendors() error {
 }
 
 // UpdateVendorStats updates market data for a specific vendor
-func (s *Scraper) UpdateVendorStats(vendorName string) error {
+func (s *Scraper) UpdateVendorStats(vendorName string) (chan Info, error) {
 	vendor, exists := s.vendors[vendorName]
 	if !exists {
-		return fmt.Errorf("vendor %s not found", vendorName)
+		return nil, fmt.Errorf("vendor %s not found", vendorName)
 	}
 
-	return s.service.UpdateVendorStats(vendor)
-}
-
-// UpdateAllVendorStats updates market data for all vendors
-func (s *Scraper) UpdateAllVendorStats() error {
-	for _, vendor := range s.vendors {
-		if err := s.service.UpdateVendorStats(vendor); err != nil {
-			return fmt.Errorf("error updating vendor %s: %w", vendor.Name, err)
-		}
-	}
-
-	return nil
+	return s.service.UpdateVendorStats(vendor), nil
 }
