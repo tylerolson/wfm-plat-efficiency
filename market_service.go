@@ -12,10 +12,10 @@ type Info struct {
 }
 
 type MarketService struct {
-	api *MarketAPI
+	api *marketAPI
 }
 
-func NewMarketService(api *MarketAPI) *MarketService {
+func NewMarketService(api *marketAPI) *MarketService {
 	return &MarketService{
 		api: api,
 	}
@@ -23,7 +23,7 @@ func NewMarketService(api *MarketAPI) *MarketService {
 
 // getVendorStats takes in a Vendor which contains a list of the items name and type (mod, weapon, etc).
 // It will then call another function to fetch the api, and update the market data.
-func (s *MarketService) UpdateVendorStats(vendor *Vendor) chan Info {
+func (s *MarketService) updateVendorStats(vendor *Vendor) chan Info {
 	infoCh := make(chan Info, len(vendor.Items))
 
 	go func() {

@@ -11,37 +11,52 @@ import (
 var vendorFS embed.FS
 
 type VendorStore struct {
-	fs embed.FS
+	vendors []*Vendor
+	fs      embed.FS
 }
 
-func NewVendorStore() *VendorStore {
+func newVendorStore() *VendorStore {
 	return &VendorStore{
-		fs: vendorFS,
+		vendors: make([]*Vendor, 0),
+		fs:      vendorFS,
 	}
 }
 
-func (r *VendorStore) LoadAllVendors() (map[string]*Vendor, error) {
-	files, err := r.fs.ReadDir("vendors")
-	if err != nil {
-		return nil, fmt.Errorf("error reading embedded vendor directory: %w", err)
+func (s *VendorStore) getVendors() []*Vendor {
+	return s.vendors
+}
+
+func (s *VendorStore) getVendor(name string) (*Vendor, error) {
+	for _, v := range s.vendors {
+		if v.Name == name {
+			return v, nil
+		}
 	}
 
-	vendors := make(map[string]*Vendor)
+	return nil, fmt.Errorf("vendor %s does not exist", name)
+}
+
+func (s *VendorStore) loadAllVendors() error {
+	files, err := s.fs.ReadDir("vendors")
+	if err != nil {
+		return fmt.Errorf("error reading embedded vendor directory: %w", err)
+	}
 
 	for _, file := range files {
 		if file.IsDir() || filepath.Ext(file.Name()) != ".json" {
 			continue
 		}
 
-		vendor, err := r.loadVendorFromFile(file.Name())
+		vendor, err := s.loadVendorFromFile(file.Name())
 		if err != nil {
-			return nil, fmt.Errorf("error loading vendor from %s: %w", file.Name(), err)
+			return fmt.Errorf("error loading vendor from %s: %w", file.Name(), err)
 		}
 
-		vendors[vendor.Name] = vendor
+		s.vendors = append(s.vendors, vendor)
+
 	}
 
-	return vendors, nil
+	return nil
 }
 
 func (s *VendorStore) loadVendorFromFile(filename string) (*Vendor, error) {

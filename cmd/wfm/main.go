@@ -15,13 +15,13 @@ func main() {
 	}
 
 	// Update market data for all vendors
-	for name := range scraper.GetVendors() {
-		resultChan, err := scraper.UpdateVendorStats(name)
+	for _, vendor := range scraper.GetVendors() {
+		resultChan, err := scraper.UpdateVendorStats(vendor.Name)
 		if err != nil {
 			log.Fatal(err)
 		}
 
-		fmt.Printf("Starting %v\n", name)
+		fmt.Printf("Starting %v\n", vendor.Name)
 		for value := range resultChan { // Loop until the channel is closed
 			if value.Err != nil {
 				fmt.Printf("Failed to fetch %s: %v\n", value.ItemName, value.Err)

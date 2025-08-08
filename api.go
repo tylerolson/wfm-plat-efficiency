@@ -24,13 +24,13 @@ type statisticResponse struct {
 }
 
 // MarketAPI handles all API communication
-type MarketAPI struct {
+type marketAPI struct {
 	client  *http.Client
 	baseURL string
 }
 
-func NewMarketAPI() *MarketAPI {
-	return &MarketAPI{
+func newMarketAPI() *marketAPI {
+	return &marketAPI{
 		client:  &http.Client{},
 		baseURL: API,
 	}
@@ -42,7 +42,7 @@ func NewMarketAPI() *MarketAPI {
 //  1. weightedAveragePrice = ((todayAvgPrice * todayVolume) + (yesterdayAvgPrice * yesterdayVolume)) / (todayVolume + yesterdayVolume)
 //  2. avgVolume = (todayVolume + yesterdayVolume) / 2
 //  3. error
-func (api *MarketAPI) GetItemStatistics(itemName string, itemType ItemType) (*MarketData, error) {
+func (api *marketAPI) GetItemStatistics(itemName string, itemType ItemType) (*MarketData, error) {
 	url := fmt.Sprintf("%v/items/%v/statistics", api.baseURL, itemName)
 
 	// make a stupid request with an accept header since warframe market redirects without it
@@ -75,7 +75,7 @@ func (api *MarketAPI) GetItemStatistics(itemName string, itemType ItemType) (*Ma
 	return api.calculateMarketData(response.Payload.StatisticsClosed.NinetyDays, itemType)
 }
 
-func (api *MarketAPI) calculateMarketData(ninetyDays []ninetyDay, itemType ItemType) (*MarketData, error) {
+func (api *marketAPI) calculateMarketData(ninetyDays []ninetyDay, itemType ItemType) (*MarketData, error) {
 	if len(ninetyDays) < 2 {
 		return nil, fmt.Errorf("insufficient data points")
 	}

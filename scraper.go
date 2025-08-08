@@ -1,45 +1,39 @@
 package standingcalc
 
-import "fmt"
-
 type Scraper struct {
-	vendors     map[string]*Vendor
 	service     *MarketService
 	vendorStore *VendorStore
 }
 
 func NewScraper() *Scraper {
-	api := NewMarketAPI()
+	api := newMarketAPI()
 	service := NewMarketService(api)
-	store := NewVendorStore()
+	store := newVendorStore()
 
 	return &Scraper{
-		vendors:     make(map[string]*Vendor),
 		vendorStore: store,
 		service:     service,
 	}
 }
 
-func (s *Scraper) GetVendors() map[string]*Vendor {
-	return s.vendors
+func (s *Scraper) LoadVendors() error {
+	return s.vendorStore.loadAllVendors()
 }
 
-func (s *Scraper) LoadVendors() error {
-	vendors, err := s.vendorStore.LoadAllVendors()
-	if err != nil {
-		return err
-	}
+func (s *Scraper) GetVendors() []*Vendor {
+	return s.vendorStore.getVendors()
+}
 
-	s.vendors = vendors
-	return nil
+func (s *Scraper) GetVendor(name string) (*Vendor, error) {
+	return s.vendorStore.getVendor(name)
 }
 
 // UpdateVendorStats updates market data for a specific vendor
 func (s *Scraper) UpdateVendorStats(vendorName string) (chan Info, error) {
-	vendor, exists := s.vendors[vendorName]
-	if !exists {
-		return nil, fmt.Errorf("vendor %s not found", vendorName)
+	vendor, err := s.vendorStore.getVendor(vendorName)
+	if err != nil {
+		return nil, err
 	}
 
-	return s.service.UpdateVendorStats(vendor), nil
+	return s.service.updateVendorStats(vendor), nil
 }
