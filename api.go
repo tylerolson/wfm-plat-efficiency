@@ -104,11 +104,11 @@ func (api *marketAPI) calculateMarketData(ninetyDays []ninetyDay, itemType ItemT
 		return nil, fmt.Errorf("no trading volume data")
 	}
 
-	weightedAvgPrice := (today.AvgPrice*float64(today.Volume) + yesterday.AvgPrice*float64(yesterday.Volume)) / float64(totalVolume)
-	avgVol := float64(totalVolume) / 2
+	weightedPrice := (today.AvgPrice*float64(today.Volume) + yesterday.AvgPrice*float64(yesterday.Volume)) / float64(totalVolume)
+	volume := float64(totalVolume) / 2
 
 	return &MarketData{
-		WeightedAvgPrice: weightedAvgPrice,
-		AvgVol:           avgVol,
+		WeightedPrice: weightedPrice,
+		Volume:        volume,
 	}, nil
 }

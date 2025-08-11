@@ -29,13 +29,13 @@ func (v Vendor) String() string {
 		if l := len(fmt.Sprintf("%d", item.StandingCost)); l > maxStanding {
 			maxStanding = l
 		}
-		if l := len(fmt.Sprintf("%.2f", item.WeightedAvgPrice)); l > maxPrice {
+		if l := len(fmt.Sprintf("%.2f", item.WeightedPrice)); l > maxPrice {
 			maxPrice = l
 		}
-		if l := len(fmt.Sprintf("%.2f", item.AvgVol)); l > maxVol {
+		if l := len(fmt.Sprintf("%.2f", item.Volume)); l > maxVol {
 			maxVol = l
 		}
-		if l := len(fmt.Sprintf("%.2f", float64(item.StandingCost)/item.WeightedAvgPrice)); l > maxStandVol {
+		if l := len(fmt.Sprintf("%.2f", float64(item.StandingCost)/item.WeightedPrice)); l > maxStandVol {
 			maxStandVol = l
 		}
 	}
@@ -67,8 +67,8 @@ func (v Vendor) String() string {
 			item.Name,
 			item.Type.String(),
 			item.StandingCost,
-			item.WeightedAvgPrice,
-			item.AvgVol,
+			item.WeightedPrice,
+			item.Volume,
 			item.StandingPerPlat(),
 		)
 

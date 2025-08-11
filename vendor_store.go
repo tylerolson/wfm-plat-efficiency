@@ -26,6 +26,16 @@ func (s *VendorStore) getVendors() []*Vendor {
 	return s.vendors
 }
 
+func (s *VendorStore) getVendorNames() []string {
+	vendorNames := make([]string, 0)
+
+	for _, v := range s.vendors {
+		vendorNames = append(vendorNames, v.Name)
+	}
+
+	return vendorNames
+}
+
 func (s *VendorStore) getVendor(name string) (*Vendor, error) {
 	for _, v := range s.vendors {
 		if v.Name == name {

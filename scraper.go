@@ -24,6 +24,10 @@ func (s *Scraper) GetVendors() []*Vendor {
 	return s.vendorStore.getVendors()
 }
 
+func (s *Scraper) GetVendorNames() []string {
+	return s.vendorStore.getVendorNames()
+}
+
 func (s *Scraper) GetVendor(name string) (*Vendor, error) {
 	return s.vendorStore.getVendor(name)
 }
