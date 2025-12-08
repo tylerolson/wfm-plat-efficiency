@@ -1,0 +1,351 @@
+{
+  "slug": "the_perrin_sequence",
+  "name": "The Perrin Sequence",
+  "items": [
+    {
+      "name": "toxic_sequence",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "deadly_sequence",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "voltage_sequence",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "sequence_burn",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "sonic_fracture",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "resonance",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "savage_silence",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "resonating_quake",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "afterburn",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "everlasting_ward",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "vexing_retaliation",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "guided_effigy",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "mach_crash",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "thermal_transfer",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "cathode_current",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "balefire_surge",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "blazing_pillage",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "desiccations_curse",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "elemental_sandstorm",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "negation_swarm",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "empowered_quiver",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "piercing_navigator",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "infiltrate",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "concentrated_arrow",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "greedy_pull",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "magnetized_discharge",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "counter_pulse",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "fracturing_crush",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "soul_survivor",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "creeping_terrify",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "despoil",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "shield_of_shadows",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "teeming_virulence",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "larva_burst",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "insatiable",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "abundant_mutation",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "repair_dispensary",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "temporal_erosion",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "thrall_pact",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "mesmer_shield",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "blinding_reave",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "ironclad_charge",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "iron_shrapnel",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "piercing_roar",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "reinforcing_stomp",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "pool_of_life",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "vampire_leech",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "abating_link",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "champions_blessing",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "swing_line",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "eternal_war",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "prolonged_paralysis",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "hysterical_assault",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "enraged",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "tesla_bank",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "repelling_bastille",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "photon_repeater",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "shadow_haze",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "guardian_armor",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "parasitic_vitality",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "coil_recharge",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "aegis_gale",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "onorix_handle",
+      "type": 1,
+      "standing": 20000
+    },
+    {
+      "name": "phaedra_receiver",
+      "type": 1,
+      "standing": 20000
+    },
+    {
+      "name": "centaur_blade",
+      "type": 1,
+      "standing": 20000
+    },
+    {
+      "name": "cyngas_stock",
+      "type": 1,
+      "standing": 20000
+    },
+    {
+      "name": "secura_dual_cestra",
+      "type": 2,
+      "standing": 100000
+    },
+    {
+      "name": "secura_penta",
+      "type": 2,
+      "standing": 125000
+    },
+    {
+      "name": "secura_lecta",
+      "type": 2,
+      "standing": 125000
+    }
+  ]
+}

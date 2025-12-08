@@ -30,20 +30,20 @@ func (s *VendorStore) getVendorNames() []string {
 	vendorNames := make([]string, 0)
 
 	for _, v := range s.vendors {
-		vendorNames = append(vendorNames, v.Name)
+		vendorNames = append(vendorNames, v.Slug)
 	}
 
 	return vendorNames
 }
 
-func (s *VendorStore) getVendor(name string) (*Vendor, error) {
+func (s *VendorStore) getVendor(slug string) (*Vendor, error) {
 	for _, v := range s.vendors {
-		if v.Name == name {
+		if v.Slug == slug {
 			return v, nil
 		}
 	}
 
-	return nil, fmt.Errorf("vendor %s does not exist", name)
+	return nil, fmt.Errorf("vendor %s does not exist", slug)
 }
 
 func (s *VendorStore) loadAllVendors() error {

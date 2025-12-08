@@ -1,138 +1,154 @@
 {
-  "name": "Cephalon Suda",
+  "slug": "arbiters_of_hexis",
+  "name": "Arbiters of Hexis",
   "items": [
     {
-      "name": "entropy_spike",
+      "name": "gilded_truth",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_flight",
+      "name": "blade_of_truth",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_detonation",
+      "name": "avenging_truth",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_burst",
+      "name": "stinging_truth",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "sonic_fracture",
+      "name": "seeking_shuriken",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "resonance",
+      "name": "smoke_shadow",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "savage_silence",
+      "name": "fatal_teleport",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "resonating_quake",
+      "name": "rising_storm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "afterburn",
+      "name": "endless_lullaby",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "everlasting_ward",
+      "name": "reactive_storm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "vexing_retaliation",
+      "name": "duality",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "guided_effigy",
+      "name": "calm_and_frenzy",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "freeze_force",
+      "name": "peaceful_provocation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "ice_wave_impedance",
+      "name": "energy_transfer",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "chilling_globe",
+      "name": "surging_dash",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "icy_avalanche",
+      "name": "radiant_finish",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "biting_frost",
+      "name": "furious_javelin",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "balefire_surge",
+      "name": "chromatic_blade",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "blazing_pillage",
+      "name": "shattered_storm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "corroding_barrage",
+      "name": "mending_splinters",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "tidal_impunity",
+      "name": "spectrosiphon",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rousing_plunder",
+      "name": "mach_crash",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "pilfering_swarm",
+      "name": "thermal_transfer",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "empowered_quiver",
+      "name": "cathode_current",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "piercing_navigator",
+      "name": "tribunal",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "infiltrate",
+      "name": "warding_thurible",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "concentrated_arrow",
+      "name": "lasting_covenant",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "desiccations_curse",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "elemental_sandstorm",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "negation_swarm",
       "type": 0,
       "standing": 25000
     },
@@ -152,6 +168,26 @@
       "standing": 25000
     },
     {
+      "name": "savior_decoy",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "hushed_invisibility",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "safeguard_switch",
+      "type": 0,
+      "standing": 25000
+    },
+    {
+      "name": "irradiating_disarm",
+      "type": 0,
+      "standing": 25000
+    },
+    {
       "name": "hall_of_malevolence",
       "type": 0,
       "standing": 25000
@@ -167,177 +203,137 @@
       "standing": 25000
     },
     {
-      "name": "pyroclastic_flow",
+      "name": "mind_freak",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "reaping_chakram",
+      "name": "pacifying_bolts",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "safeguard",
+      "name": "chaos_sphere",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "controlled_slide",
+      "name": "assimilate",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "neutron_star",
+      "name": "repair_dispensary",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "antimatter_absorb",
+      "name": "temporal_erosion",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "escape_velocity",
+      "name": "intrepid_stand",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "molecular_fission",
+      "name": "shock_trooper",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "partitioned_mallet",
+      "name": "shocking_speed",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "conductor",
+      "name": "transistor_shield",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "thrall_pact",
+      "name": "capacitance",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "mesmer_shield",
+      "name": "celestial_stomp",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "blinding_reave",
+      "name": "enveloping_cloud",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shadow_haze",
+      "name": "primal_rage",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "tesla_bank",
+      "name": "elusive_retribution",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "repelling_bastille",
+      "name": "damage_decoy",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "photon_repeater",
+      "name": "axios_javelineers",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "fused_reservoir",
+      "name": "warriors_rest",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "critical_surge",
+      "name": "coil_recharge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "vampiric_grasp",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "the_relentless_lost",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "merulina_guardian",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "surging_blades",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "guardian_armor",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "divine_retribution",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "loyal_merulina",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "aegis_gale",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "decurion_receiver",
+      "name": "decurion_barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "velocitus_barrel",
+      "name": "phaedra_barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "corvas_receiver",
+      "name": "corvas_barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "cyngas_receiver",
+      "name": "cyngas_barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "fluctus_barrel",
+      "name": "centaur_aegis",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "synoid_gammacor",
+      "name": "telos_akbolto",
       "type": 2,
       "standing": 100000
     },
     {
-      "name": "synoid_simulor",
+      "name": "telos_boltor",
       "type": 2,
       "standing": 125000
     },
     {
-      "name": "synoid_heliocor",
+      "name": "telos_boltace",
       "type": 2,
       "standing": 125000
     }

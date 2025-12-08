@@ -22,9 +22,8 @@ func (t ItemType) String() string {
 }
 
 type MarketData struct {
-	WeightedPrice float64 `json:"weightedPrice"`
-	Volume        float64 `json:"volume"`
-	Price         float64 `json:"price"`
+	Price  float64 `json:"price"`
+	Volume float64 `json:"volume"`
 }
 
 type Item struct {
@@ -35,8 +34,8 @@ type Item struct {
 }
 
 func (i *Item) StandingPerPlat() float64 {
-	if i.WeightedPrice == 0 {
+	if i.Price == 0 {
 		return 0
 	}
-	return float64(i.StandingCost) / i.WeightedPrice
+	return float64(i.StandingCost) / i.Price
 }

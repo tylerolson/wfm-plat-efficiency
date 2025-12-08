@@ -2,6 +2,7 @@ package standingcalc
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"net/http"
@@ -68,7 +69,7 @@ func (api *marketAPI) GetItemStatistics(itemName string, itemType ItemType) (*Ma
 	}
 
 	var response statisticResponse
-	if err != json.NewDecoder(resp.Body).Decode(&response) {
+	if !errors.Is(err, json.NewDecoder(resp.Body).Decode(&response)) {
 		return nil, fmt.Errorf("failed to decode statistics:%w", err)
 	}
 
@@ -104,14 +105,11 @@ func (api *marketAPI) calculateMarketData(ninetyDays []ninetyDay, itemType ItemT
 		return nil, fmt.Errorf("no trading volume data")
 	}
 
-	avgPrice := (today.AvgPrice + yesterday.AvgPrice) / 2
-
-	weightedPrice := (today.AvgPrice*float64(today.Volume) + yesterday.AvgPrice*float64(yesterday.Volume)) / float64(totalVolume)
 	volume := float64(totalVolume) / 2
+	weightedPrice := (today.AvgPrice*float64(today.Volume) + yesterday.AvgPrice*float64(yesterday.Volume)) / float64(totalVolume)
 
 	return &MarketData{
-		WeightedPrice: weightedPrice,
-		Volume:        volume,
-		Price:         avgPrice,
+		Price:  weightedPrice,
+		Volume: volume,
 	}, nil
 }

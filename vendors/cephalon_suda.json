@@ -1,373 +1,344 @@
 {
-  "name": "Red Veil",
+  "slug": "cephalon_suda",
+  "name": "Cephalon Suda",
   "items": [
     {
-      "name": "gleaming_blight",
+      "name": "entropy_spike",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "eroding_blight",
+      "name": "entropy_flight",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "stockpiled_blight",
+      "name": "entropy_detonation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "toxic_blight",
+      "name": "entropy_burst",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "seeking_shuriken",
+      "name": "sonic_fracture",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "smoke_shadow",
+      "name": "resonance",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "fatal_teleport",
+      "name": "savage_silence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rising_storm",
+      "name": "resonating_quake",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "path_of_statues",
+      "name": "afterburn",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "tectonic_fracture",
+      "name": "everlasting_ward",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "ore_gaze",
+      "name": "vexing_retaliation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "titanic_rumbler",
+      "name": "guided_effigy",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rubble_heap",
+      "name": "freeze_force",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "fireball_frenzy",
+      "name": "ice_wave_impedance",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "immolated_radiance",
+      "name": "chilling_globe",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "healing_flame",
+      "name": "icy_avalanche",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "exothermic",
+      "name": "biting_frost",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "dread_ward",
+      "name": "balefire_surge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "blood_forge",
+      "name": "blazing_pillage",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "blending_talons",
+      "name": "corroding_barrage",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "gourmand",
+      "name": "tidal_impunity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "hearty_nourishment",
+      "name": "rousing_plunder",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "catapult",
+      "name": "pilfering_swarm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "tribunal",
+      "name": "empowered_quiver",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "warding_thurible",
+      "name": "piercing_navigator",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "lasting_covenant",
+      "name": "infiltrate",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "accumulating_whipclaw",
+      "name": "concentrated_arrow",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "venari_bodyguard",
+      "name": "rift_haven",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "pilfering_strangledome",
+      "name": "rift_torrent",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "swift_bite",
+      "name": "cataclysmic_continuum",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "savior_decoy",
+      "name": "hall_of_malevolence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "hushed_invisibility",
+      "name": "explosive_legerdemain",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "safeguard_switch",
+      "name": "total_eclipse",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "irradiating_disarm",
+      "name": "pyroclastic_flow",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "ballistic_bullseye",
+      "name": "reaping_chakram",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "staggering_shield",
+      "name": "safeguard",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "muzzle_flash",
+      "name": "controlled_slide",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "mesas_waltz",
+      "name": "neutron_star",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "soul_survivor",
+      "name": "antimatter_absorb",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "creeping_terrify",
+      "name": "escape_velocity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "despoil",
+      "name": "molecular_fission",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shield_of_shadows",
+      "name": "partitioned_mallet",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "venom_dose",
+      "name": "conductor",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "revealing_spores",
+      "name": "thrall_pact",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "regenerative_molt",
+      "name": "mesmer_shield",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "contagion_cloud",
+      "name": "blinding_reave",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "spellbound_harvest",
+      "name": "shadow_haze",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "beguiling_lantern",
+      "name": "tesla_bank",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "razorwing_blitz",
+      "name": "repelling_bastille",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "ironclad_flight",
+      "name": "photon_repeater",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shock_trooper",
+      "name": "fused_reservoir",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shocking_speed",
+      "name": "critical_surge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "transistor_shield",
+      "name": "vampiric_grasp",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "capacitance",
+      "name": "the_relentless_lost",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "ulfruns_endurance",
+      "name": "merulina_guardian",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "target_fixation",
+      "name": "surging_blades",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "airburst_rounds",
+      "name": "guardian_armor",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "jet_stream",
+      "name": "divine_retribution",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "funnel_clouds",
+      "name": "loyal_merulina",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "anchored_glide",
+      "name": "aegis_gale",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "recrystalize",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "valence_formation",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "damage_decoy",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "warriors_rest",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "prey_of_dynar",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "gastro",
-      "type": 0,
-      "standing": 25000
-    },
-    {
-      "name": "kaszas_blade",
+      "name": "decurion_receiver",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "velocitus_stock",
+      "name": "velocitus_barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "rathbone_handle",
+      "name": "corvas_receiver",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "agkuza_handle",
+      "name": "cyngas_receiver",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "fluctus_limbs",
+      "name": "fluctus_barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "rakta_ballistica",
+      "name": "synoid_gammacor",
       "type": 2,
       "standing": 100000
     },
     {
-      "name": "rakta_cernos",
+      "name": "synoid_simulor",
       "type": 2,
       "standing": 125000
     },
     {
-      "name": "rakta_dark_dagger",
+      "name": "synoid_heliocor",
       "type": 2,
       "standing": 125000
     }

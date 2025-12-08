@@ -2,59 +2,90 @@ package standingcalc
 
 import (
 	"fmt"
+	"math"
 	"sort"
 	"strings"
 	"text/tabwriter"
 )
 
 type Vendor struct {
+	Slug  string  `json:"slug"`
 	Name  string  `json:"name"`
 	Items []*Item `json:"items"`
 }
 
-func (v Vendor) HighestVolume() *Item {
+// MostVolume returns the [Item] with the greatest volume over 2 days
+func (v Vendor) MostVolume() *Item {
 	if v.Items == nil || len(v.Items) == 0 {
 		return nil
 	}
 
-	highestVolume := v.Items[0]
+	mostVolume := v.Items[0]
 	for _, i := range v.Items {
-		if i.Volume > highestVolume.Volume {
-			highestVolume = i
+		if i.Volume > mostVolume.Volume {
+			mostVolume = i
 		}
 	}
 
-	return highestVolume
+	return mostVolume
 }
 
-func (v Vendor) HighestProfit() *Item {
+// MostProfit returns the [Item] with the greatest weighted platinum average across 2 days
+func (v Vendor) MostProfit() *Item {
 	if v.Items == nil || len(v.Items) == 0 {
 		return nil
 	}
 
-	highestPrice := v.Items[0]
+	mostProfit := v.Items[0]
 	for _, i := range v.Items {
-		if i.Price > highestPrice.Price {
-			highestPrice = i
+		if i.Price > mostProfit.Price {
+			mostProfit = i
 		}
 	}
 
-	return highestPrice
+	return mostProfit
 }
 
-func (v Vendor) HighestWeightedAverage() *Item {
+// MostEfficient returns the [Item] with the highest computed score:
+// price * ln(1+volume)/ln(1+maxVolume) / standingCost
+// This should log scaling to punish low volume greatly but not over score higher volumes.
+// We then also normalize based on the vendor's current market.
+// It should only return [nil] on an error.
+func (v Vendor) MostEfficient() *Item {
 	if v.Items == nil || len(v.Items) == 0 {
 		return nil
 	}
 
-	highestWeightedAverage := v.Items[0]
+	maxVolumeAmount := v.MostVolume().Volume
+	if maxVolumeAmount <= 0 {
+		return nil
+	}
+
+	denominator := math.Log1p(maxVolumeAmount)
+
+	mostEfficientItem := v.Items[0]
+	itemScore := -math.MaxFloat64
+
 	for _, i := range v.Items {
-		if i.WeightedPrice > highestWeightedAverage.WeightedPrice {
-			highestWeightedAverage = i
+		// prevent / 0 panic
+		if i.StandingCost <= 0 {
+			continue
+		}
+		volumeFactor := math.Log1p(i.Volume) / denominator
+		score := i.Price * volumeFactor / float64(i.StandingCost)
+
+		if score > itemScore {
+			itemScore = score
+			mostEfficientItem = i
+		} else if score == itemScore {
+			// break tie with weighted average
+			if i.Price > mostEfficientItem.Price {
+				mostEfficientItem = i
+			}
 		}
 	}
 
-	return highestWeightedAverage
+	return mostEfficientItem
 }
 
 func (v Vendor) String() string {
@@ -74,13 +105,13 @@ func (v Vendor) String() string {
 		if l := len(fmt.Sprintf("%d", item.StandingCost)); l > maxStanding {
 			maxStanding = l
 		}
-		if l := len(fmt.Sprintf("%.2f", item.WeightedPrice)); l > maxPrice {
+		if l := len(fmt.Sprintf("%.2f", item.Price)); l > maxPrice {
 			maxPrice = l
 		}
 		if l := len(fmt.Sprintf("%.2f", item.Volume)); l > maxVol {
 			maxVol = l
 		}
-		if l := len(fmt.Sprintf("%.2f", float64(item.StandingCost)/item.WeightedPrice)); l > maxStandVol {
+		if l := len(fmt.Sprintf("%.2f", float64(item.StandingCost)/item.Price)); l > maxStandVol {
 			maxStandVol = l
 		}
 	}
@@ -112,7 +143,7 @@ func (v Vendor) String() string {
 			item.Name,
 			item.Type.String(),
 			item.StandingCost,
-			item.WeightedPrice,
+			item.Price,
 			item.Volume,
 			item.StandingPerPlat(),
 		)
