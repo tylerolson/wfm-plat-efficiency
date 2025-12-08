@@ -12,6 +12,51 @@ type Vendor struct {
 	Items []*Item `json:"items"`
 }
 
+func (v Vendor) HighestVolume() *Item {
+	if v.Items == nil || len(v.Items) == 0 {
+		return nil
+	}
+
+	highestVolume := v.Items[0]
+	for _, i := range v.Items {
+		if i.Volume > highestVolume.Volume {
+			highestVolume = i
+		}
+	}
+
+	return highestVolume
+}
+
+func (v Vendor) HighestProfit() *Item {
+	if v.Items == nil || len(v.Items) == 0 {
+		return nil
+	}
+
+	highestPrice := v.Items[0]
+	for _, i := range v.Items {
+		if i.Price > highestPrice.Price {
+			highestPrice = i
+		}
+	}
+
+	return highestPrice
+}
+
+func (v Vendor) HighestWeightedAverage() *Item {
+	if v.Items == nil || len(v.Items) == 0 {
+		return nil
+	}
+
+	highestWeightedAverage := v.Items[0]
+	for _, i := range v.Items {
+		if i.WeightedPrice > highestWeightedAverage.WeightedPrice {
+			highestWeightedAverage = i
+		}
+	}
+
+	return highestWeightedAverage
+}
+
 func (v Vendor) String() string {
 	// get slice from map so we can sort it
 	itemSlice := make([]*Item, 0, len(v.Items))

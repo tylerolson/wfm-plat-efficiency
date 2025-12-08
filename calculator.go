@@ -1,39 +1,39 @@
 package standingcalc
 
-type Scraper struct {
+type Calculator struct {
 	service     *MarketService
 	vendorStore *VendorStore
 }
 
-func NewScraper() *Scraper {
+func NewScraper() *Calculator {
 	api := newMarketAPI()
 	service := NewMarketService(api)
 	store := newVendorStore()
 
-	return &Scraper{
+	return &Calculator{
 		vendorStore: store,
 		service:     service,
 	}
 }
 
-func (s *Scraper) LoadVendors() error {
+func (s *Calculator) LoadVendors() error {
 	return s.vendorStore.loadAllVendors()
 }
 
-func (s *Scraper) GetVendors() []*Vendor {
+func (s *Calculator) GetVendors() []*Vendor {
 	return s.vendorStore.getVendors()
 }
 
-func (s *Scraper) GetVendorNames() []string {
+func (s *Calculator) GetVendorNames() []string {
 	return s.vendorStore.getVendorNames()
 }
 
-func (s *Scraper) GetVendor(name string) (*Vendor, error) {
+func (s *Calculator) GetVendor(name string) (*Vendor, error) {
 	return s.vendorStore.getVendor(name)
 }
 
 // UpdateVendorStats updates market data for a specific vendor
-func (s *Scraper) UpdateVendorStats(vendorName string) (chan Info, error) {
+func (s *Calculator) UpdateVendorStats(vendorName string) (chan Info, error) {
 	vendor, err := s.vendorStore.getVendor(vendorName)
 	if err != nil {
 		return nil, err

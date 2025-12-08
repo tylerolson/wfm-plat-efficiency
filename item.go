@@ -24,6 +24,7 @@ func (t ItemType) String() string {
 type MarketData struct {
 	WeightedPrice float64 `json:"weightedPrice"`
 	Volume        float64 `json:"volume"`
+	Price         float64 `json:"price"`
 }
 
 type Item struct {
