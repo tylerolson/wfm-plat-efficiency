@@ -10,6 +10,6 @@ For the web deployment version go to: [wfm-standing-calc-web](https://github.com
 
 ## TODO
 
-~~- add progress channel~~
-~~- add error channel~~
+- ~~add progress channel~~
+- ~~add error channel~~
 - save results to a local db
