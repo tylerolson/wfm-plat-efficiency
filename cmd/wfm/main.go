@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	scraper := standingcalc.NewScraper()
+	scraper := standingcalc.NewCalculator()
 
 	if err := scraper.LoadVendors(); err != nil {
 		log.Fatal(err)

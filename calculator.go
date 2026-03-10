@@ -1,3 +1,4 @@
+// Package standingcalc is a tool for calculating the standing efficiency of a vendor
 package standingcalc
 
 type Calculator struct {
@@ -5,7 +6,7 @@ type Calculator struct {
 	vendorStore *VendorStore
 }
 
-func NewScraper() *Calculator {
+func NewCalculator() *Calculator {
 	api := newMarketAPI()
 	service := NewMarketService(api)
 	store := newVendorStore()

@@ -30,6 +30,7 @@ func (s *MarketService) updateVendorStats(vendor *Vendor) chan Info {
 		var wg sync.WaitGroup
 
 		ticker := time.NewTicker(time.Second / 3)
+		defer ticker.Stop()
 
 		for _, item := range vendor.Items {
 
@@ -49,11 +50,9 @@ func (s *MarketService) updateVendorStats(vendor *Vendor) chan Info {
 			}(item)
 		}
 
-		go func() {
-			wg.Wait()
-			close(infoCh)
-			ticker.Stop()
-		}()
+		wg.Wait()
+		vendor.ScoreItems()
+		close(infoCh)
 	}()
 
 	return infoCh

@@ -2,9 +2,7 @@ package standingcalc
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
-	"log"
 	"net/http"
 )
 
@@ -49,7 +47,7 @@ func (api *marketAPI) GetItemStatistics(itemName string, itemType ItemType) (*Ma
 	// make a stupid request with an accept header since warframe market redirects without it
 	req, err := http.NewRequest("GET", url, nil) // No request body for GET
 	if err != nil {
-		log.Fatalf("Error creating request: %v", err)
+		return nil, fmt.Errorf("failed to create request: %w", err)
 	}
 
 	req.Header.Add("Accept", "application/json")
@@ -65,11 +63,11 @@ func (api *marketAPI) GetItemStatistics(itemName string, itemType ItemType) (*Ma
 			return nil, fmt.Errorf("item does not exist")
 		}
 
-		return nil, fmt.Errorf("unkown HTTP error: %v", resp.Status)
+		return nil, fmt.Errorf("unknown HTTP error: %v", resp.Status)
 	}
 
 	var response statisticResponse
-	if !errors.Is(err, json.NewDecoder(resp.Body).Decode(&response)) {
+	if err := json.NewDecoder(resp.Body).Decode(&response); err != nil {
 		return nil, fmt.Errorf("failed to decode statistics:%w", err)
 	}
 
