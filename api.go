@@ -35,14 +35,14 @@ func newMarketAPI() *marketAPI {
 	}
 }
 
-// getStatisitics takes in an [Item] containing an items name and [ItemType].
+// getStatisitics takes in an [Item] containing an item slug and [ItemType].
 // It fetches the API statistics and calculates and returns:
 //
 //  1. weightedAveragePrice = ((todayAvgPrice * todayVolume) + (yesterdayAvgPrice * yesterdayVolume)) / (todayVolume + yesterdayVolume)
 //  2. avgVolume = (todayVolume + yesterdayVolume) / 2
 //  3. error
-func (api *marketAPI) GetItemStatistics(itemName string, itemType ItemType) (*MarketData, error) {
-	url := fmt.Sprintf("%v/items/%v/statistics", api.baseURL, itemName)
+func (api *marketAPI) GetItemStatistics(itemSlug string, itemType ItemType) (*MarketData, error) {
+	url := fmt.Sprintf("%v/items/%v/statistics", api.baseURL, itemSlug)
 
 	// make a stupid request with an accept header since warframe market redirects without it
 	req, err := http.NewRequest("GET", url, nil) // No request body for GET

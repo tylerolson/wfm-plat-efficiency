@@ -3,357 +3,428 @@
   "name": "New Loka",
   "items": [
     {
-      "name": "winds_of_purity",
+      "slug": "winds_of_purity",
+      "name": "Winds of Purity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "disarming_purity",
+      "slug": "disarming_purity",
+      "name": "Disarming Purity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "bright_purity",
+      "slug": "bright_purity",
+      "name": "Bright Purity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "lasting_purity",
+      "slug": "lasting_purity",
+      "name": "Lasting Purity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "endless_lullaby",
+      "slug": "endless_lullaby",
+      "name": "Endless Lullaby",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "reactive_storm",
+      "slug": "reactive_storm",
+      "name": "Reactive Storm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "duality",
+      "slug": "duality",
+      "name": "Duality",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "calm_and_frenzy",
+      "slug": "calm_and_frenzy",
+      "name": "Calm & Frenzy",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "peaceful_provocation",
+      "slug": "peaceful_provocation",
+      "name": "Peaceful Provocation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "energy_transfer",
+      "slug": "energy_transfer",
+      "name": "Energy Transfer",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shattered_storm",
+      "slug": "shattered_storm",
+      "name": "Shattered Storm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "mending_splinters",
+      "slug": "mending_splinters",
+      "name": "Mending Splinters",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "spectrosiphon",
+      "slug": "spectrosiphon",
+      "name": "Spectrosiphon",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "corroding_barrage",
+      "slug": "corroding_barrage",
+      "name": "Corroding Barrage",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "tidal_impunity",
+      "slug": "tidal_impunity",
+      "name": "Tidal Impunity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rousing_plunder",
+      "slug": "rousing_plunder",
+      "name": "Rousing Plunder",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "pilfering_swarm",
+      "slug": "pilfering_swarm",
+      "name": "Pilfering Swarm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "swift_bite",
+      "slug": "swift_bite",
+      "name": "Swift Bite",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "greedy_pull",
+      "slug": "greedy_pull",
+      "name": "Greedy Pull",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "magnetized_discharge",
+      "slug": "magnetized_discharge",
+      "name": "Magnetized Discharge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "counter_pulse",
+      "slug": "counter_pulse",
+      "name": "Counter Pulse",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "fracturing_crush",
+      "slug": "fracturing_crush",
+      "name": "Fracturing Crush",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "mind_freak",
+      "slug": "mind_freak",
+      "name": "Mind Freak",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "pacifying_bolts",
+      "slug": "pacifying_bolts",
+      "name": "Pacifying Bolts",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "chaos_sphere",
+      "slug": "chaos_sphere",
+      "name": "Chaos Sphere",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "assimilate",
+      "slug": "assimilate",
+      "name": "Assimilate",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "smite_infusion",
+      "slug": "smite_infusion",
+      "name": "Smite Infusion",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "hallowed_eruption",
+      "slug": "hallowed_eruption",
+      "name": "Hallowed Eruption",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "phoenix_renewal",
+      "slug": "phoenix_renewal",
+      "name": "Phoenix Renewal",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "hallowed_reckoning",
+      "slug": "hallowed_reckoning",
+      "name": "Hallowed Reckoning",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "partitioned_mallet",
+      "slug": "partitioned_mallet",
+      "name": "Partitioned Mallet",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "conductor",
+      "slug": "conductor",
+      "name": "Conductor",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "spellbound_harvest",
+      "slug": "spellbound_harvest",
+      "name": "Spellbound Harvest",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "beguiling_lantern",
+      "slug": "beguiling_lantern",
+      "name": "Beguiling Lantern",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "razorwing_blitz",
+      "slug": "razorwing_blitz",
+      "name": "Razorwing Blitz",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "intrepid_stand",
+      "slug": "intrepid_stand",
+      "name": "Intrepid Stand",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "ironclad_flight",
+      "slug": "ironclad_flight",
+      "name": "Ironclad Flight",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "pool_of_life",
+      "slug": "pool_of_life",
+      "name": "Pool of Life",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "vampire_leech",
+      "slug": "vampire_leech",
+      "name": "Vampire Leech",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "abating_link",
+      "slug": "abating_link",
+      "name": "Abating Link",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "champions_blessing",
+      "slug": "champions_blessing",
+      "name": "Champions Blessing",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "swing_line",
+      "slug": "swing_line",
+      "name": "Swing Line",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "eternal_war",
+      "slug": "eternal_war",
+      "name": "Eternal War",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "prolonged_paralysis",
+      "slug": "prolonged_paralysis",
+      "name": "Prolonged Paralysis",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "hysterical_assault",
+      "slug": "hysterical_assault",
+      "name": "Hysterical Assault",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "enraged",
+      "slug": "enraged",
+      "name": "Enraged",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "fused_reservoir",
+      "slug": "fused_reservoir",
+      "name": "Fused Reservoir",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "critical_surge",
+      "slug": "critical_surge",
+      "name": "Critical Surge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "target_fixation",
+      "slug": "target_fixation",
+      "name": "Target Fixation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "airburst_rounds",
+      "slug": "airburst_rounds",
+      "name": "Airburst Rounds",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "jet_stream",
+      "slug": "jet_stream",
+      "name": "Jet Stream",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "funnel_clouds",
+      "slug": "funnel_clouds",
+      "name": "Funnel Clouds",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "anchored_glide",
+      "slug": "anchored_glide",
+      "name": "Anchored Glide",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "celestial_stomp",
+      "slug": "celestial_stomp",
+      "name": "Celestial Stomp",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "enveloping_cloud",
+      "slug": "enveloping_cloud",
+      "name": "Enveloping Cloud",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "primal_rage",
+      "slug": "primal_rage",
+      "name": "Primal Rage",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "merulina_guardian",
+      "slug": "merulina_guardian",
+      "name": "Merulina Guardian",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "surging_blades",
+      "slug": "surging_blades",
+      "name": "Surging Blades",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "elusive_retribution",
+      "slug": "elusive_retribution",
+      "name": "Elusive Retribution",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "wrath_of_ukko",
+      "slug": "wrath_of_ukko",
+      "name": "Wrath of Ukko",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "valence_formation",
+      "slug": "valence_formation",
+      "name": "Valence Formation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "axios_javelineers",
+      "slug": "axios_javelineers",
+      "name": "Axios Javelineers",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "loyal_merulina",
+      "slug": "loyal_merulina",
+      "name": "Loyal Merulina",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "onorix_blade",
+      "slug": "onorix_blade",
+      "name": "Onorix Blade",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "phaedra_stock",
+      "slug": "phaedra_stock",
+      "name": "Phaedra Stock",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "rathbone_head",
+      "slug": "rathbone_head",
+      "name": "Rathbone Head",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "agkuza_blade",
+      "slug": "agkuza_blade",
+      "name": "Agkuza Blade",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "centaur_handle",
+      "slug": "centaur_handle",
+      "name": "Centaur Handle",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "sancti_castanas",
+      "slug": "sancti_castanas",
+      "name": "Sancti Castanas",
       "type": 2,
       "standing": 100000
     },
     {
-      "name": "sancti_tigris",
+      "slug": "sancti_tigris",
+      "name": "Sancti Tigris",
       "type": 2,
       "standing": 125000
     },
     {
-      "name": "sancti_magistar",
+      "slug": "sancti_magistar",
+      "name": "Sancti Magistar",
       "type": 2,
       "standing": 125000
     }

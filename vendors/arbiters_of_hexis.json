@@ -3,337 +3,404 @@
   "name": "Arbiters of Hexis",
   "items": [
     {
-      "name": "gilded_truth",
+      "slug": "gilded_truth",
+      "name": "Gilded Truth",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "blade_of_truth",
+      "slug": "blade_of_truth",
+      "name": "Blade of Truth",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "avenging_truth",
+      "slug": "avenging_truth",
+      "name": "Avenging Truth",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "stinging_truth",
+      "slug": "stinging_truth",
+      "name": "Stinging Truth",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "seeking_shuriken",
+      "slug": "seeking_shuriken",
+      "name": "Seeking Shuriken",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "smoke_shadow",
+      "slug": "smoke_shadow",
+      "name": "Smoke Shadow",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "fatal_teleport",
+      "slug": "fatal_teleport",
+      "name": "Fatal Teleport",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rising_storm",
+      "slug": "rising_storm",
+      "name": "Rising Storm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "endless_lullaby",
+      "slug": "endless_lullaby",
+      "name": "Endless Lullaby",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "reactive_storm",
+      "slug": "reactive_storm",
+      "name": "Reactive Storm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "duality",
+      "slug": "duality",
+      "name": "Duality",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "calm_and_frenzy",
+      "slug": "calm_and_frenzy",
+      "name": "Calm & Frenzy",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "peaceful_provocation",
+      "slug": "peaceful_provocation",
+      "name": "Peaceful Provocation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "energy_transfer",
+      "slug": "energy_transfer",
+      "name": "Energy Transfer",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "surging_dash",
+      "slug": "surging_dash",
+      "name": "Surging Dash",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "radiant_finish",
+      "slug": "radiant_finish",
+      "name": "Radiant Finish",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "furious_javelin",
+      "slug": "furious_javelin",
+      "name": "Furious Javelin",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "chromatic_blade",
+      "slug": "chromatic_blade",
+      "name": "Chromatic Blade",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shattered_storm",
+      "slug": "shattered_storm",
+      "name": "Shattered Storm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "mending_splinters",
+      "slug": "mending_splinters",
+      "name": "Mending Splinters",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "spectrosiphon",
+      "slug": "spectrosiphon",
+      "name": "Spectrosiphon",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "mach_crash",
+      "slug": "mach_crash",
+      "name": "Mach Crash",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "thermal_transfer",
+      "slug": "thermal_transfer",
+      "name": "Thermal Transfer",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "cathode_current",
+      "slug": "cathode_current",
+      "name": "Cathode Current",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "tribunal",
+      "slug": "tribunal",
+      "name": "Tribunal",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "warding_thurible",
+      "slug": "warding_thurible",
+      "name": "Warding Thurible",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "lasting_covenant",
+      "slug": "lasting_covenant",
+      "name": "Lasting Covenant",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "desiccations_curse",
+      "slug": "desiccations_curse",
+      "name": "Desiccations Curse",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "elemental_sandstorm",
+      "slug": "elemental_sandstorm",
+      "name": "Elemental Sandstorm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "negation_swarm",
+      "slug": "negation_swarm",
+      "name": "Negation Swarm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rift_haven",
+      "slug": "rift_haven",
+      "name": "Rift Haven",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rift_torrent",
+      "slug": "rift_torrent",
+      "name": "Rift Torrent",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "cataclysmic_continuum",
+      "slug": "cataclysmic_continuum",
+      "name": "Cataclysmic Continuum",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "savior_decoy",
+      "slug": "savior_decoy",
+      "name": "Savior Decoy",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "hushed_invisibility",
+      "slug": "hushed_invisibility",
+      "name": "Hushed Invisibility",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "safeguard_switch",
+      "slug": "safeguard_switch",
+      "name": "Safeguard Switch",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "irradiating_disarm",
+      "slug": "irradiating_disarm",
+      "name": "Irradiating Disarm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "hall_of_malevolence",
+      "slug": "hall_of_malevolence",
+      "name": "Hall Of Malevolence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "explosive_legerdemain",
+      "slug": "explosive_legerdemain",
+      "name": "Explosive Legerdemain",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "total_eclipse",
+      "slug": "total_eclipse",
+      "name": "Total Eclipse",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "mind_freak",
+      "slug": "mind_freak",
+      "name": "Mind Freak",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "pacifying_bolts",
+      "slug": "pacifying_bolts",
+      "name": "Pacifying Bolts",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "chaos_sphere",
+      "slug": "chaos_sphere",
+      "name": "Chaos Sphere",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "assimilate",
+      "slug": "assimilate",
+      "name": "Assimilate",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "repair_dispensary",
+      "slug": "repair_dispensary",
+      "name": "Repair Dispensary",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "temporal_erosion",
+      "slug": "temporal_erosion",
+      "name": "Temporal Erosion",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "intrepid_stand",
+      "slug": "intrepid_stand",
+      "name": "Intrepid Stand",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shock_trooper",
+      "slug": "shock_trooper",
+      "name": "Shock Trooper",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shocking_speed",
+      "slug": "shocking_speed",
+      "name": "Shocking Speed",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "transistor_shield",
+      "slug": "transistor_shield",
+      "name": "Transistor Shield",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "capacitance",
+      "slug": "capacitance",
+      "name": "Capacitance",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "celestial_stomp",
+      "slug": "celestial_stomp",
+      "name": "Celestial Stomp",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "enveloping_cloud",
+      "slug": "enveloping_cloud",
+      "name": "Enveloping Cloud",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "primal_rage",
+      "slug": "primal_rage",
+      "name": "Primal Rage",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "elusive_retribution",
+      "slug": "elusive_retribution",
+      "name": "Elusive Retribution",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "damage_decoy",
+      "slug": "damage_decoy",
+      "name": "Damage Decoy",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "axios_javelineers",
+      "slug": "axios_javelineers",
+      "name": "Axios Javelineers",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "warriors_rest",
+      "slug": "warriors_rest",
+      "name": "Warriors Rest",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "coil_recharge",
+      "slug": "coil_recharge",
+      "name": "Coil Recharge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "decurion_barrel",
+      "slug": "decurion_barrel",
+      "name": "Decurion Barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "phaedra_barrel",
+      "slug": "phaedra_barrel",
+      "name": "Phaedra Barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "corvas_barrel",
+      "slug": "corvas_barrel",
+      "name": "Corvas Barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "cyngas_barrel",
+      "slug": "cyngas_barrel",
+      "name": "Cyngas Barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "centaur_aegis",
+      "slug": "centaur_aegis",
+      "name": "Centaur Aegis",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "telos_akbolto",
+      "slug": "telos_akbolto",
+      "name": "Telos Akbolto",
       "type": 2,
       "standing": 100000
     },
     {
-      "name": "telos_boltor",
+      "slug": "telos_boltor",
+      "name": "Telos Boltor",
       "type": 2,
       "standing": 125000
     },
     {
-      "name": "telos_boltace",
+      "slug": "telos_boltace",
+      "name": "Telos Boltace",
       "type": 2,
       "standing": 125000
     }

@@ -3,347 +3,416 @@
   "name": "The Perrin Sequence",
   "items": [
     {
-      "name": "toxic_sequence",
+      "slug": "toxic_sequence",
+      "name": "Toxic Sequence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "deadly_sequence",
+      "slug": "deadly_sequence",
+      "name": "Deadly Sequence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "voltage_sequence",
+      "slug": "voltage_sequence",
+      "name": "Voltage Sequence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "sequence_burn",
+      "slug": "sequence_burn",
+      "name": "Sequence Burn",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "sonic_fracture",
+      "slug": "sonic_fracture",
+      "name": "Sonic Fracture",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "resonance",
+      "slug": "resonance",
+      "name": "Resonance",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "savage_silence",
+      "slug": "savage_silence",
+      "name": "Savage Silence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "resonating_quake",
+      "slug": "resonating_quake",
+      "name": "Resonating Quake",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "afterburn",
+      "slug": "afterburn",
+      "name": "Afterburn",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "everlasting_ward",
+      "slug": "everlasting_ward",
+      "name": "Everlasting Ward",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "vexing_retaliation",
+      "slug": "vexing_retaliation",
+      "name": "Vexing Retaliation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "guided_effigy",
+      "slug": "guided_effigy",
+      "name": "Guided Effigy",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "mach_crash",
+      "slug": "mach_crash",
+      "name": "Mach Crash",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "thermal_transfer",
+      "slug": "thermal_transfer",
+      "name": "Thermal Transfer",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "cathode_current",
+      "slug": "cathode_current",
+      "name": "Cathode Current",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "balefire_surge",
+      "slug": "balefire_surge",
+      "name": "Balefire Surge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "blazing_pillage",
+      "slug": "blazing_pillage",
+      "name": "Blazing Pillage",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "desiccations_curse",
+      "slug": "desiccations_curse",
+      "name": "Desiccations Curse",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "elemental_sandstorm",
+      "slug": "elemental_sandstorm",
+      "name": "Elemental Sandstorm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "negation_swarm",
+      "slug": "negation_swarm",
+      "name": "Negation Swarm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "empowered_quiver",
+      "slug": "empowered_quiver",
+      "name": "Empowered Quiver",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "piercing_navigator",
+      "slug": "piercing_navigator",
+      "name": "Piercing Navigator",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "infiltrate",
+      "slug": "infiltrate",
+      "name": "Infiltrate",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "concentrated_arrow",
+      "slug": "concentrated_arrow",
+      "name": "Concentrated Arrow",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "greedy_pull",
+      "slug": "greedy_pull",
+      "name": "Greedy Pull",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "magnetized_discharge",
+      "slug": "magnetized_discharge",
+      "name": "Magnetized Discharge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "counter_pulse",
+      "slug": "counter_pulse",
+      "name": "Counter Pulse",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "fracturing_crush",
+      "slug": "fracturing_crush",
+      "name": "Fracturing Crush",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "soul_survivor",
+      "slug": "soul_survivor",
+      "name": "Soul Survivor",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "creeping_terrify",
+      "slug": "creeping_terrify",
+      "name": "Creeping Terrify",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "despoil",
+      "slug": "despoil",
+      "name": "Despoil",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shield_of_shadows",
+      "slug": "shield_of_shadows",
+      "name": "Shield of Shadows",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "teeming_virulence",
+      "slug": "teeming_virulence",
+      "name": "Teeming Virulence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "larva_burst",
+      "slug": "larva_burst",
+      "name": "Larva Burst",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "insatiable",
+      "slug": "insatiable",
+      "name": "Insatiable",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "abundant_mutation",
+      "slug": "abundant_mutation",
+      "name": "Abundant Mutation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "repair_dispensary",
+      "slug": "repair_dispensary",
+      "name": "Repair Dispensary",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "temporal_erosion",
+      "slug": "temporal_erosion",
+      "name": "Temporal Erosion",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "thrall_pact",
+      "slug": "thrall_pact",
+      "name": "Thrall Pact",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "mesmer_shield",
+      "slug": "mesmer_shield",
+      "name": "Mesmer Shield",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "blinding_reave",
+      "slug": "blinding_reave",
+      "name": "Blinding Reave",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "ironclad_charge",
+      "slug": "ironclad_charge",
+      "name": "Ironclad Charge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "iron_shrapnel",
+      "slug": "iron_shrapnel",
+      "name": "Iron Shrapnel",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "piercing_roar",
+      "slug": "piercing_roar",
+      "name": "Piercing Roar",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "reinforcing_stomp",
+      "slug": "reinforcing_stomp",
+      "name": "Reinforcing Stomp",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "pool_of_life",
+      "slug": "pool_of_life",
+      "name": "Pool of Life",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "vampire_leech",
+      "slug": "vampire_leech",
+      "name": "Vampire Leech",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "abating_link",
+      "slug": "abating_link",
+      "name": "Abating Link",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "champions_blessing",
+      "slug": "champions_blessing",
+      "name": "Champions Blessing",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "swing_line",
+      "slug": "swing_line",
+      "name": "Swing Line",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "eternal_war",
+      "slug": "eternal_war",
+      "name": "Eternal War",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "prolonged_paralysis",
+      "slug": "prolonged_paralysis",
+      "name": "Prolonged Paralysis",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "hysterical_assault",
+      "slug": "hysterical_assault",
+      "name": "Hysterical Assault",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "enraged",
+      "slug": "enraged",
+      "name": "Enraged",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "tesla_bank",
+      "slug": "tesla_bank",
+      "name": "Tesla Bank",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "repelling_bastille",
+      "slug": "repelling_bastille",
+      "name": "Repelling Bastille",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "photon_repeater",
+      "slug": "photon_repeater",
+      "name": "Photon Repeater",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shadow_haze",
+      "slug": "shadow_haze",
+      "name": "Shadow Haze",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "guardian_armor",
+      "slug": "guardian_armor",
+      "name": "Guardian Armor",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "parasitic_vitality",
+      "slug": "parasitic_vitality",
+      "name": "Parasitic Vitality",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "coil_recharge",
+      "slug": "coil_recharge",
+      "name": "Coil Recharge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "aegis_gale",
+      "slug": "aegis_gale",
+      "name": "Aegis Gale",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "onorix_handle",
+      "slug": "onorix_handle",
+      "name": "Onorix Handle",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "phaedra_receiver",
+      "slug": "phaedra_receiver",
+      "name": "Phaedra Receiver",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "centaur_blade",
+      "slug": "centaur_blade",
+      "name": "Centaur Blade",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "cyngas_stock",
+      "slug": "cyngas_stock",
+      "name": "Cyngas Stock",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "secura_dual_cestra",
+      "slug": "secura_dual_cestra",
+      "name": "Secura Dual Cestra",
       "type": 2,
       "standing": 100000
     },
     {
-      "name": "secura_penta",
+      "slug": "secura_penta",
+      "name": "Secura Penta",
       "type": 2,
       "standing": 125000
     },
     {
-      "name": "secura_lecta",
+      "slug": "secura_lecta",
+      "name": "Secura Lecta",
       "type": 2,
       "standing": 125000
     }

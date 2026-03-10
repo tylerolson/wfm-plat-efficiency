@@ -26,14 +26,14 @@ func (s *VendorStore) getVendors() []*Vendor {
 	return s.vendors
 }
 
-func (s *VendorStore) getVendorNames() []string {
-	vendorNames := make([]string, 0)
+func (s *VendorStore) getVendorSlugs() []string {
+	vendorSlugs := make([]string, 0)
 
 	for _, v := range s.vendors {
-		vendorNames = append(vendorNames, v.Slug)
+		vendorSlugs = append(vendorSlugs, v.Slug)
 	}
 
-	return vendorNames
+	return vendorSlugs
 }
 
 func (s *VendorStore) getVendor(slug string) (*Vendor, error) {

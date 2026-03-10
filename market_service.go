@@ -7,6 +7,7 @@ import (
 )
 
 type Info struct {
+	ItemSlug string
 	ItemName string
 	Err      error
 }
@@ -44,6 +45,7 @@ func (s *MarketService) updateVendorStats(vendor *Vendor) chan Info {
 				err := s.UpdateItemStats(item)
 
 				infoCh <- Info{
+					item.Slug,
 					item.Name,
 					err,
 				}
@@ -60,9 +62,9 @@ func (s *MarketService) updateVendorStats(vendor *Vendor) chan Info {
 
 // UpdateItemStats updates market data for a single item
 func (s *MarketService) UpdateItemStats(item *Item) error {
-	marketData, err := s.api.GetItemStatistics(item.Name, item.Type)
+	marketData, err := s.api.GetItemStatistics(item.Slug, item.Type)
 	if err != nil {
-		return fmt.Errorf("error fetching %s: %w", item.Name, err)
+		return fmt.Errorf("error fetching %s: %w", item.Slug, err)
 	}
 
 	item.MarketData = *marketData

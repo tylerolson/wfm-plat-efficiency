@@ -3,342 +3,410 @@
   "name": "Cephalon Suda",
   "items": [
     {
-      "name": "entropy_spike",
+      "slug": "entropy_spike",
+      "name": "Entropy Spike",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_flight",
+      "slug": "entropy_flight",
+      "name": "Entropy Flight",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_detonation",
+      "slug": "entropy_detonation",
+      "name": "Entropy Detonation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "entropy_burst",
+      "slug": "entropy_burst",
+      "name": "Entropy Burst",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "sonic_fracture",
+      "slug": "sonic_fracture",
+      "name": "Sonic Fracture",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "resonance",
+      "slug": "resonance",
+      "name": "Resonance",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "savage_silence",
+      "slug": "savage_silence",
+      "name": "Savage Silence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "resonating_quake",
+      "slug": "resonating_quake",
+      "name": "Resonating Quake",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "afterburn",
+      "slug": "afterburn",
+      "name": "Afterburn",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "everlasting_ward",
+      "slug": "everlasting_ward",
+      "name": "Everlasting Ward",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "vexing_retaliation",
+      "slug": "vexing_retaliation",
+      "name": "Vexing Retaliation",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "guided_effigy",
+      "slug": "guided_effigy",
+      "name": "Guided Effigy",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "freeze_force",
+      "slug": "freeze_force",
+      "name": "Freeze Force",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "ice_wave_impedance",
+      "slug": "ice_wave_impedance",
+      "name": "Ice Wave Impedance",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "chilling_globe",
+      "slug": "chilling_globe",
+      "name": "Chilling Globe",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "icy_avalanche",
+      "slug": "icy_avalanche",
+      "name": "Icy Avalanche",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "biting_frost",
+      "slug": "biting_frost",
+      "name": "Biting Frost",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "balefire_surge",
+      "slug": "balefire_surge",
+      "name": "Balefire Surge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "blazing_pillage",
+      "slug": "blazing_pillage",
+      "name": "Blazing Pillage",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "corroding_barrage",
+      "slug": "corroding_barrage",
+      "name": "Corroding Barrage",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "tidal_impunity",
+      "slug": "tidal_impunity",
+      "name": "Tidal Impunity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rousing_plunder",
+      "slug": "rousing_plunder",
+      "name": "Rousing Plunder",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "pilfering_swarm",
+      "slug": "pilfering_swarm",
+      "name": "Pilfering Swarm",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "empowered_quiver",
+      "slug": "empowered_quiver",
+      "name": "Empowered Quiver",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "piercing_navigator",
+      "slug": "piercing_navigator",
+      "name": "Piercing Navigator",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "infiltrate",
+      "slug": "infiltrate",
+      "name": "Infiltrate",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "concentrated_arrow",
+      "slug": "concentrated_arrow",
+      "name": "Concentrated Arrow",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rift_haven",
+      "slug": "rift_haven",
+      "name": "Rift Haven",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "rift_torrent",
+      "slug": "rift_torrent",
+      "name": "Rift Torrent",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "cataclysmic_continuum",
+      "slug": "cataclysmic_continuum",
+      "name": "Cataclysmic Continuum",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "hall_of_malevolence",
+      "slug": "hall_of_malevolence",
+      "name": "Hall of Malevolence",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "explosive_legerdemain",
+      "slug": "explosive_legerdemain",
+      "name": "Explosive Legerdemain",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "total_eclipse",
+      "slug": "total_eclipse",
+      "name": "Total Eclipse",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "pyroclastic_flow",
+      "slug": "pyroclastic_flow",
+      "name": "Pyroclastic Flow",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "reaping_chakram",
+      "slug": "reaping_chakram",
+      "name": "Reaping Chakram",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "safeguard",
+      "slug": "safeguard",
+      "name": "Safeguard",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "controlled_slide",
+      "slug": "controlled_slide",
+      "name": "Controlled Slide",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "neutron_star",
+      "slug": "neutron_star",
+      "name": "Neutron Star",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "antimatter_absorb",
+      "slug": "antimatter_absorb",
+      "name": "Antimatter Absorb",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "escape_velocity",
+      "slug": "escape_velocity",
+      "name": "Escape Velocity",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "molecular_fission",
+      "slug": "molecular_fission",
+      "name": "Molecular Fission",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "partitioned_mallet",
+      "slug": "partitioned_mallet",
+      "name": "Partitioned Mallet",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "conductor",
+      "slug": "conductor",
+      "name": "Conductor",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "thrall_pact",
+      "slug": "thrall_pact",
+      "name": "Thrall Pact",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "mesmer_shield",
+      "slug": "mesmer_shield",
+      "name": "Mesmer Shield",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "blinding_reave",
+      "slug": "blinding_reave",
+      "name": "Blinding Reave",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "shadow_haze",
+      "slug": "shadow_haze",
+      "name": "Shadow Haze",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "tesla_bank",
+      "slug": "tesla_bank",
+      "name": "Tesla Bank",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "repelling_bastille",
+      "slug": "repelling_bastille",
+      "name": "Repelling Bastille",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "photon_repeater",
+      "slug": "photon_repeater",
+      "name": "Photon Repeater",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "fused_reservoir",
+      "slug": "fused_reservoir",
+      "name": "Fused Reservoir",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "critical_surge",
+      "slug": "critical_surge",
+      "name": "Critical Surge",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "vampiric_grasp",
+      "slug": "vampiric_grasp",
+      "name": "Vampiric Grasp",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "the_relentless_lost",
+      "slug": "the_relentless_lost",
+      "name": "The Relentless Lost",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "merulina_guardian",
+      "slug": "merulina_guardian",
+      "name": "Merulina Guardian",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "surging_blades",
+      "slug": "surging_blades",
+      "name": "Surging Blades",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "guardian_armor",
+      "slug": "guardian_armor",
+      "name": "Guardian Armor",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "divine_retribution",
+      "slug": "divine_retribution",
+      "name": "Divine Retribution",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "loyal_merulina",
+      "slug": "loyal_merulina",
+      "name": "Loyal Merulina",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "aegis_gale",
+      "slug": "aegis_gale",
+      "name": "Aegis Gale",
       "type": 0,
       "standing": 25000
     },
     {
-      "name": "decurion_receiver",
+      "slug": "decurion_receiver",
+      "name": "Decurion Receiver",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "velocitus_barrel",
+      "slug": "velocitus_barrel",
+      "name": "Velocitus Barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "corvas_receiver",
+      "slug": "corvas_receiver",
+      "name": "Corvas Receiver",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "cyngas_receiver",
+      "slug": "cyngas_receiver",
+      "name": "Cyngas Receiver",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "fluctus_barrel",
+      "slug": "fluctus_barrel",
+      "name": "Fluctus Barrel",
       "type": 1,
       "standing": 20000
     },
     {
-      "name": "synoid_gammacor",
+      "slug": "synoid_gammacor",
+      "name": "Synoid Gammacor",
       "type": 2,
       "standing": 100000
     },
     {
-      "name": "synoid_simulor",
+      "slug": "synoid_simulor",
+      "name": "Synoid Simulor",
       "type": 2,
       "standing": 125000
     },
     {
-      "name": "synoid_heliocor",
+      "slug": "synoid_heliocor",
+      "name": "Synoid Heliocor",
       "type": 2,
       "standing": 125000
     }

@@ -25,17 +25,17 @@ func (s *Calculator) GetVendors() []*Vendor {
 	return s.vendorStore.getVendors()
 }
 
-func (s *Calculator) GetVendorNames() []string {
-	return s.vendorStore.getVendorNames()
+func (s *Calculator) GetVendorSlugs() []string {
+	return s.vendorStore.getVendorSlugs()
 }
 
-func (s *Calculator) GetVendor(name string) (*Vendor, error) {
-	return s.vendorStore.getVendor(name)
+func (s *Calculator) GetVendor(slug string) (*Vendor, error) {
+	return s.vendorStore.getVendor(slug)
 }
 
 // UpdateVendorStats updates market data for a specific vendor
-func (s *Calculator) UpdateVendorStats(vendorName string) (chan Info, error) {
-	vendor, err := s.vendorStore.getVendor(vendorName)
+func (s *Calculator) UpdateVendorStats(slug string) (chan Info, error) {
+	vendor, err := s.vendorStore.getVendor(slug)
 	if err != nil {
 		return nil, err
 	}

@@ -28,6 +28,7 @@ type MarketData struct {
 }
 
 type Item struct {
+	Slug         string   `json:"slug"`
 	Name         string   `json:"name"`
 	Type         ItemType `json:"type"`
 	StandingCost int      `json:"standing"`
