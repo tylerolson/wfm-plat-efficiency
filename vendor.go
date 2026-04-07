@@ -8,7 +8,7 @@ import (
 	"text/tabwriter"
 )
 
-const SCORE_SCALE = 100000.0
+const scoreScale = 100000.0
 
 type Vendor struct {
 	Slug  string  `json:"slug"`
@@ -50,7 +50,7 @@ func (v Vendor) MostProfit() *Item {
 	return mostProfit
 }
 
-// MostProfit returns the [Item] with the highest efficieny score
+// MostEfficient returns the [Item] with the highest efficiency score
 // It should only return [nil] on an error.
 func (v Vendor) MostEfficient() *Item {
 	if len(v.Items) == 0 {
@@ -60,10 +60,6 @@ func (v Vendor) MostEfficient() *Item {
 	mostEfficient := v.Items[0]
 	itemScore := -math.MaxFloat64
 	for _, i := range v.Items {
-		if i.Score > mostEfficient.Score {
-			mostEfficient = i
-		}
-
 		if i.Score > itemScore {
 			itemScore = i.Score
 			mostEfficient = i
@@ -84,16 +80,15 @@ func (v Vendor) MostEfficient() *Item {
 // This should log scaling to punish low volume greatly but not over score higher volumes.
 // We then also normalize based on the vendor's current market.
 func (v *Vendor) ScoreItems() {
-	if len(v.Items) == 0 {
+	if len(v.Items) == 0 || v.MostVolume() == nil {
 		return
 	}
 
-	maxVolumeAmount := v.MostVolume().Volume
-	if maxVolumeAmount <= 0 {
+	if v.MostVolume().Volume <= 0 {
 		return
 	}
 
-	denominator := math.Log1p(maxVolumeAmount)
+	denominator := math.Log1p(v.MostVolume().Volume)
 
 	for _, i := range v.Items {
 		// prevent / 0 panic
@@ -102,7 +97,7 @@ func (v *Vendor) ScoreItems() {
 		}
 		volumeFactor := math.Log1p(i.Volume) / denominator
 		i.Score = i.Price * volumeFactor / float64(i.StandingCost)
-		i.Score *= SCORE_SCALE
+		i.Score *= scoreScale
 	}
 }
 
