@@ -1,5 +1,10 @@
 package standingcalc
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
 type ItemType int
 
 const (
@@ -19,6 +24,34 @@ func (t ItemType) String() string {
 	default:
 		return "Unknown"
 	}
+}
+
+func (t ItemType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(t.String())
+}
+
+func (t *ItemType) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		// Try numeric fallback for backward compatibility with JSON files
+		var n int
+		if err := json.Unmarshal(data, &n); err != nil {
+			return err
+		}
+		*t = ItemType(n)
+		return nil
+	}
+	switch s {
+	case "Mod":
+		*t = ItemTypeMod
+	case "ArchPart":
+		*t = ItemTypeArchPart
+	case "Weapon":
+		*t = ItemTypeWeapon
+	default:
+		return fmt.Errorf("unknown item type: %s", s)
+	}
+	return nil
 }
 
 type MarketData struct {

@@ -26,8 +26,8 @@ func (s *VendorStore) getVendors() []*Vendor {
 	return s.vendors
 }
 
-func (s *VendorStore) getVendorSlugs() []string {
-	vendorSlugs := make([]string, 0)
+func (s *VendorStore) getVendorSlugs() []VendorSlug {
+	vendorSlugs := make([]VendorSlug, 0)
 
 	for _, v := range s.vendors {
 		vendorSlugs = append(vendorSlugs, v.Slug)
@@ -36,7 +36,7 @@ func (s *VendorStore) getVendorSlugs() []string {
 	return vendorSlugs
 }
 
-func (s *VendorStore) getVendor(slug string) (*Vendor, error) {
+func (s *VendorStore) getVendor(slug VendorSlug) (*Vendor, error) {
 	for _, v := range s.vendors {
 		if v.Slug == slug {
 			return v, nil

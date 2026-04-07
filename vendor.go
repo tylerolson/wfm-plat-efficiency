@@ -10,10 +10,21 @@ import (
 
 const scoreScale = 100000.0
 
+type VendorSlug string
+
+const (
+	VendorSlugArbitersOfHexis   VendorSlug = "arbiters_of_hexis"
+	VendorSlugCephalonSuda      VendorSlug = "cephalon_suda"
+	VendorSlugNewLoka           VendorSlug = "new_loka"
+	VendorSlugRedVeil           VendorSlug = "red_veil"
+	VendorSlugSteelMeridian     VendorSlug = "steel_meridian"
+	VendorSlugThePerrinSequence VendorSlug = "the_perrin_sequence"
+)
+
 type Vendor struct {
-	Slug  string  `json:"slug"`
-	Name  string  `json:"name"`
-	Items []*Item `json:"items"`
+	Slug  VendorSlug `json:"slug"`
+	Name  string     `json:"name"`
+	Items []*Item    `json:"items"`
 }
 
 // MostVolume returns the [Item] with the greatest volume over 2 days
